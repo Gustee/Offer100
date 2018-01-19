@@ -81,5 +81,11 @@ class HrRegisterForm(forms.Form):
                                   }))
 
 
-class PersionalInfoForm(forms.Form):
+class PersonalInfoForm(forms.Form):
     name = forms.CharField()
+
+
+class AccountForm(forms.Form):
+    phone = forms.CharField()
+    password = forms.CharField()
+    re_password = forms.CharField()

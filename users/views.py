@@ -67,7 +67,7 @@ class RegisterView(View):
                 new_user.save()
                 hr = HR(user=new_user, nick_name=nick_name, company_name=com_name, phone=phone)
                 hr.save()
-                #send_register_email(username, 'register')
+                send_register_email(username, 'register')
                 return render(request, 'talent_confirm_mail.html', context={'email': username})
             return render(request, 'register.html',
                           {'candidate_register_form': candidate_register_form,
@@ -134,19 +134,56 @@ class LogoutView(View):
 
 class PersonalInfoView(View):
     def get(self, request):
-        return render(request, 'persional_info.html')
+        if request.user.is_authenticated():
+            personal_info_form = PersonalInfoForm(request.POST)
+            return render(request, 'persional_info.html', {'form': personal_info_form})
+        else:
+            return HttpResponseRedirect('/signin')
 
     def post(self, request):
-        name = request.POST.get('name', '')
-        gender = request.POST.get('gender', 'male')
-        education = request.POST.get('education', 'bachelor')
-        city = request.POST.get('city', '')
-        mobile = request.POST.get('mobile', '')
-        image = request.FILES.get('image', 'default.png')
+        if request.user.is_authenticated():
+            personal_info_form = PersonalInfoForm(request.POST)
+            if personal_info_form.is_valid():
+                name = request.POST.get('name', '')
+                gender = request.POST.get('gender', 'male')
+                education = request.POST.get('education', 'bachelor')
+                city = request.POST.get('city', '')
+                mobile = request.POST.get('mobile', '')
+                image = request.FILES.get('image', 'default.png')
+                candidate = Candidate.objects.get(user=request.user)
+                candidate.name = name
+                candidate.gender = gender
+                candidate.education = education
+                candidate.city = city
+                candidate.mobile = mobile
+                candidate.image = image
+                candidate.save()
+                return HttpResponseRedirect('/home')
+            return render(request, 'persional_info.html', {'form': personal_info_form})
+        return HttpResponseRedirect('/signin')
+
+
+class AccountView(View):
+    def get(self, request):
+        if request.user.is_authenticated():
+            candidate = Candidate.objects.get(user=request.user)
+            account_form = AccountForm()
+            return render(request, 'account.html', {
+                'email': request.user.username,
+                'form': account_form
+            })
+
+    def post(self, request):
+        account_form = PersonalInfoForm(request.POST)
+        if account_form.is_valid():
+            candidate = Candidate.objects.get(user=request.user)
+            mobile = request.POST.get('mobile', '')
+
+
+
+
 
 # class HomeView(View):
 #     def get(self, request):
 #         return render(request, 'home.html')
 
-def home_view(request):
-    return render(request, 'home.html')
