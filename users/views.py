@@ -96,19 +96,18 @@ class LoginView(View):
                         return HttpResponseRedirect("/home")
                     else:
                         #hr登陆成功
-                        return render(request, "login.html", {"login_form": LoginForm(),
-                                                          "msg": "账号被冻结！"})
+                        return HttpResponseRedirect('/home')
                 else:
                     #用户没有激活提示用户去邮箱点击激活链接
                     return render(request, "login.html", {"login_form": LoginForm(),
-                                                      "msg": "账号或密码错误！"})
+                                                      "msg": "您的账号还没有使用邮箱激活"})
             else:
                 #用户名或密码错误
                 return render(request, "login.html", {"login_form": LoginForm(),
-                                                  "msg": "格式不合法！"})
+                                                  "msg": "用户名或密码不正确"})
         else:
             #输入不合法
-            return render(request, '')
+            return render(request, 'login.html', {'login_form': login_form, 'msg': '您的输入不合法'})
 
 
 class ActiveUserView(View):
