@@ -1,0 +1,1 @@
+$(function(){$(".mark-read").click(function(){$.ajax({url:"/mark_messages_read",type:"post",success:function(){$(".message-box-content .message-item").remove(),$(".message-box .unread-count").remove(),$(".notice-bell .has-unread").removeClass("has-unread"),$(".message-box-content .no-unread-message").removeClass("hidden")}})})});

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="cn" name="market" />
+    <title>注册 | offer100</title>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="c1711c3d71b4c4e1" property="wb:webmaster" />
+    <meta content="https://sg-avatars.b0.upaiyun.com/etc/facebook_share_logo.png" property="og:image:secure_url" />
+    <link href="https://snow-assets.100offer.com/assets/favicon-e1f1b22357f0563acc4fde82082583e6.png" rel="icon" type="image/png"
+    />
+    <script type="text/javascript">
+        //<![CDATA[
+        window.gon = {}; gon.mautic = {}; gon.locale = "zh-CN"; gon.need_captcha = false;
+    //]]>
+    </script>
+    <link href="https://snow-assets.100offer.com/assets/application-0a281a6ede090b30af29db2ee8b0ca8c.css" media="all" rel="stylesheet"
+    />
+    <link href="https://snow-assets.100offer.com/assets/page/signup-76613cb4e2c494b7d5de7681574921bd.css" media="screen"
+        rel="stylesheet" />
+    <script data-apikey="4532413626000b9251f5083672c49633" src="https://snow-assets.100offer.com/assets/lib/bugsnag-2.min-6c6508ceb851d1bf4b94a201df0920a5.js"></script>
+{#    <script src="https://snow-assets.100offer.com/assets/application-ce9fb79b2ec5e1d7f1bf0cec64a6ec00.js"></script>#}
+    <script type="text/javascript">I18n.defaultLocale = "zh-CN";
+        I18n.locale = "zh-CN";</script>
+    <script src="https://snow-assets.100offer.com/assets/page/signup-40f94967fc953b00e12efa8e321cfe30.js"></script>
+    <!--[if lte IE 9]><script src="https://snow-assets.100offer.com/assets/html5shiv/html5shiv.min-5deb6350c74a304e8f3fe42dc162b67a.js"></script><script src="https://snow-assets.100offer.com/assets/respond/respond.min-e848240c8954924c558bbe5af34abe17.js"></script><link href="https://snow-assets.100offer.com/assets/lib/ie8-patch-753c8612c84468be5aa6b60c5d68d654.css" media="screen" rel="stylesheet" /><![endif]-->
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="z+q3QuEI6olQ3EwdRzderiX8guMztRPUHWlfiQe2Jx8=" name="csrf-token" />
+</head>
+
+<body class="bg-gray signup-container">
+    <link href="https://snow-assets.100offer.com/assets/page/new_responsive_header-ab30fbabd024b786d6abbfbca48b0a96.css" media="screen"
+        rel="stylesheet" />
+    <div class="new-index-header nav-fixed">
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <a href="/">
+                    <img alt="Normal" src="https://snow-assets.100offer.com/assets/logos/normal-2e43a912b5ea4cc51d6f5c90805bb138.svg"
+                    />
+                </a>
+            </div>
+            <div class="mobile-menu-trigger pull-right max-767-show">
+                <i class="glamicon icon-menu-1"></i>
+                <i class="glamicon icon-menu-0 hidden"></i>
+            </div>
+            <div class="nav-item-container text-right">
+                <div class="nav-item button-text menu">
+                    <span class="main">看机会</span>
+                    <div class="menu-list">
+                        <a class="menu-item p-font " href="/">首页</a>
+                        <a class="menu-item p-font " href="/how-it-works">使用攻略</a>
+                        <a class="menu-item p-font " href="/qa/talent">常见问题</a>
+                        <a class="menu-item p-font " href="/invite">邀请朋友</a>
+                        <a class="menu-item p-font " href="/talent/app">移动版</a>
+                    </div>
+                </div>
+                <div class="nav-item button-text menu">
+                    <span class="main">招人才</span>
+                    <div class="menu-list">
+                        <a class="menu-item p-font " href="/company">首页</a>
+                        <a class="menu-item p-font " href="/how-it-works/company">使用攻略</a>
+                        <a class="menu-item p-font " href="/qa/company">常见问题</a>
+                        <a class="menu-item p-font " href="/company/app">移动版</a>
+                    </div>
+                </div>
+                <div class="nav-item button-text menu">
+                    <span class="main">博客</span>
+                    <div class="menu-list">
+                        <a class="menu-item p-font " href="/blog" target="_blank">文章</a>
+                        <a class="menu-item p-font " href="/events" target="_blank">活动</a>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <a class="default-button signin" href="/signin">登录</a>
+                    <a class="primary-button signup" href="/signup">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://snow-assets.100offer.com/assets/page/read_all-9eb813773fbda1ef75c26a59bdfd9c67.js"></script>
+    <div class="navbar-padding"></div>
+    <script type="text/javascript">$(function () {
+            $(".mobile-menu-trigger").click(function () {
+                $(".nav-item-container").toggleClass("show-up");
+                $(this).find(".icon-menu-1").toggleClass("hidden");
+                $(this).find(".icon-menu-0").toggleClass("hidden");
+            });
+
+            $(".nav-item.menu").click(function () {
+                if ($(window).width() < 768) {
+                    var the_menu_list = $(this).find(".menu-list");
+                    if (the_menu_list.is(':visible')) {
+                        the_menu_list.hide();
+                        $(this).toggleClass("expanded", false);
+                    } else {
+                        $(".menu-list").hide();
+                        $(".nav-item.menu").toggleClass("expanded", false);
+                        the_menu_list.show();
+                        $(this).toggleClass("expanded", true);
+                    }
+                }
+                else {
+                    $(this).find(".menu-list").css("display", "");
+                }
+            });
+        });</script>
+    <link href="https://snow-assets.100offer.com/assets/page/redirect_alert-852c0189b9b7483bdfbf68494a83422c.css" media="screen"
+        rel="stylesheet" />
+{#    <script type="text/javascript">$(".action-container .stay").click(function () {#}
+{#            $.cookie('redirect_alert', 'disable');#}
+{#            $(".redirect-hint").hide();#}
+{#        });</script>#}
+{#    验证码#}
+{#    <div class="fixed-modal-block valid-code-captcha dn">#}
+{#        <div class="inline-block"></div>#}
+{#        <div class="fixed-modal-body">#}
+{#            <div class="modal-close-btn absolute">&times;</div>#}
+{#            <div class="fixed-modal-title">请输入图形码</div>#}
+{#            <div class="fixed-modal-content">#}
+{#                <div class="hint">只有输入正确的图形码并成功提交后才能获取手机验证码</div>#}
+{#                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="signup-captcha-input"#}
+{#                    maxlength="4" name="_rucaptcha" pattern="[0-9a-z]*" type="text" />#}
+{#                <img alt="图形验证码" class="fr rucaptcha" src="https://cn.100offer.com/rucaptcha/" style="width: 140px; height: 45px; cursor: pointer;"#}
+{#                />#}
+{#                <div class="blue-btn" id="get-valid-code-with-captcha">提交</div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+    <div class="sign-container register">
+        <div class="sign-section content">
+            <div class="register-title">注册</div>
+            <div class="sign-type">
+                <div class="tag coder selected first">
+                    <div class="circle"></div>
+                    <div class="user-type">我是候选人</div>
+                </div>
+                <div class="tag hr last">
+                    <div class="circle"></div>
+                    <div class="user-type">我是HR</div>
+                </div>
+            </div>
+            <div class="register-body">
+                {% comment %}候选人注册{% endcomment %}
+                <form accept-charset="UTF-8" action="{% url 'signup' %}" class="simple_form new_talent" data-remote="true" id="new_talent"
+                    method="post" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div style="display:none">
+                        <input name="utf8" type="hidden" value="&#x2713;" />
+                        <input name="user_type" type="hidden" value="candidate">
+                    </div>
+                    <div class="form-inputs mt40">
+                        {% for field in candidate_register_form %}
+                        <div class="form-group">
+                            <div class="custom-input-container email optional talent_email">
+                                <label class="email optional" for="talent_email">{{ field.label }}</label>
+{#                                <input class="string email optional" id="talent_email" name="talent[email]" placeholder="输入邮箱地址"#}
+{#                                    type="email" />#}
+                                {{ field }}
+                            </div>
+                        </div>
+                        {% endfor %}
+{#                        <div class="form-group">#}
+{#                            <div class="custom-input-container password optional talent_password">#}
+{#                                <label class="password optional" for="talent_password">密码</label>#}
+{#                                <input class="password optional" id="talent_password" name="talent[password]" placeholder="请输入您的密码"#}
+{#                                    type="password" />#}
+{#                            </div>#}
+{#                        </div>#}
+                        <div style="clear:both"></div>
+                        <div class="terms-container">
+                            <div class="terms">
+                                <div class="form-group boolean optional talent_terms_of_service" style="margin-bottom: 0px !important; margin-right: 0px; display: inline;">
+                                    <div class="checkbox">
+                                        <input name="talent[terms_of_service]" type="hidden" value="0" />
+                                        <label>
+                                            <input checked="checked" class="boolean optional" id="talent_terms_of_service" name="talent[terms_of_service]"
+                                                type="checkbox" value="1" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div style="display: inline;">
+                                    <span>我已阅读并同意
+                                        <a href="/talent_protocol" target="_blank">100offer注册协议</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions center clear mb40 signin-submit" style="padding-top: 10px;">
+                            <input class="btn blue-btn btn" data-disable-with="正在提交..." name="commit" type="submit"
+                                value="确定" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="recruiter-register-body dn">
+                {% comment %}Hr 注册{% endcomment %}
+                <form accept-charset="UTF-8" action="{% url 'signup' %}" class="simple_form new_recruiter" data-remote="true" id="new_recruiter"
+                    method="post" novalidate="novalidate" onsubmit="SF.resetError(this);">
+                    {% csrf_token %}
+                    <div style="display:none">
+                        <input name="utf8" type="hidden" value="&#x2713;" />
+                        <input name="user_type" type="hidden" value="hr">
+                    </div>
+                    <div class="form-inputs">
+                        {% for field in hr_register_form %}
+                        <div class="form-group">
+                            <div class="custom-input-container string optional recruiter_name">
+                                <label class="string optional" for="recruiter_name">{{ field.label }}</label>
+{#                                <input class="string optional" id="recruiter_name" name="recruiter[name]" placeholder="请输入您的姓名"#}
+{#                                    type="text" />#}
+                                {{ field }}
+                            </div>
+                        </div>
+                        {% endfor %}
+{#                        <div class="form-group">#}
+{#                            <div class="custom-input-container email optional recruiter_email">#}
+{#                                <label class="email optional" for="recruiter_email">邮箱</label>#}
+{#                                <input class="string email optional" id="recruiter_email" name="recruiter[email]"#}
+{#                                    placeholder="请填写企业邮箱（不支持个人邮箱注册）" type="email" value="" />#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <div class="tel optional recruiter_signup_phone en">#}
+{#                                <label class="tel optional" style="font-weight: normal; font-size: 14px">手机</label>#}
+{#                                <div class="phone">#}
+{##}
+{#                                    <div class="custom-input-container tel optional recruiter_phone">#}
+{#                                        <input class="string tel optional phone" id="recruiter_phone" name="recruiter[phone]"#}
+{#                                            placeholder="请输入您的手机号" type="tel" />#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <div class="custom-input-container password optional recruiter_password">#}
+{#                                <label class="password optional" for="recruiter_password">密码</label>#}
+{#                                <input class="password optional" id="recruiter_password" name="recruiter[password]"#}
+{#                                    placeholder="请输入您的密码" type="password" />#}
+{#                            </div>#}
+{#                        </div>#}
+                        <div class="clarify clear">
+                            <div class="service-hint">
+                                <div class="form-group boolean optional recruiter_terms_of_service">
+                                    <div class="checkbox">
+                                        <input name="recruiter[terms_of_service]" type="hidden" value="0" />
+                                        <label>
+                                            <input checked="checked" class="boolean optional" id="recruiter_terms_of_service"
+                                                name="recruiter[terms_of_service]" type="checkbox" value="1" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="company-terms">我已阅读并同意100offer的
+                                    <a href="/company_protocol" target="_blank">企业注册协议</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form-actions center mb40 mt20">
+                            <input class="btn blue-btn btn sm-btn signup" data-disable-with="正在提交..." name="commit" type="submit"
+                                value="确定" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="ht40"></div>
+{#    <script>#}
+{#        if ('addEventListener' in document) {#}
+{#            document.addEventListener("DOMContentLoaded", function (event) {#}
+{#                function set_reset_cdn_url() {#}
+{#                    if (typeof CDN_JS_FILE_LOADED === 'undefined' && document.cookie.indexOf("reset_cdn_url") < 0) {#}
+{#                        var d = new Date();#}
+{#                        d.setTime(d.getTime() + (24 * 60 * 60));#}
+{#                        var expires = "expires=" + d.toUTCString();#}
+{#                        document.cookie = "reset_cdn_url=https://100offer.com/; " + expires;#}
+{#                        window.location.reload();#}
+{#                    }#}
+{#                }#}
+{#                setTimeout(set_reset_cdn_url, 2000)#}
+{#            });#}
+{#        }#}
+{#    </script>#}
+
+    <!-- Google Analytics -->
+{#    <script>#}
+{#        (function (i, s, o, g, r, a, m) {#}
+{#        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {#}
+{#            (i[r].q = i[r].q || []).push(arguments)#}
+{#        }, i[r].l = 1 * new Date(); a = s.createElement(o),#}
+{#            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)#}
+{#        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');#}
+{##}
+{##}
+{#        ga('create', 'UA-54096481-1', "auto");#}
+{#        ga('send', 'pageview', {});#}
+{#    </script>#}
+
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MWT3LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        dataLayer = [{
+            contact_id: -1
+        }];
+
+        (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MWT3LB');</script>
+    <!-- End Google Tag Manager -->
+
+</body>
+
+</html>
