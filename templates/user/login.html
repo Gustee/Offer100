@@ -1,0 +1,213 @@
+{% extends 'user/tpl_login.html' %}
+{% block body %}
+ <body class="login-content" data-ng-controller="loginCtrl as lctrl">
+{#    登录#}
+{% csrf_token %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/user.css'%}">
+    <div class="lc-block" id="l-login" data-ng-class="{'toggled':lctrl.login === 1}">
+    	<h1 class="lean">登录</h1>
+
+    	<div class="input-group m-b-20">
+    		<span class="input-group-addon">
+    			<i class="zmdi zmdi-account"></i>
+    		</span>
+    		<div class="fg-line">
+    			<input id="username" type="text" class="form-control" placeholder="用户名/邮箱" regex="^\w{3,16}$"/>
+    		</div>
+    	</div>
+
+        <div class="input-group m-b-20">
+    		<span class="input-group-addon">
+    			<i class="zmdi zmdi-male"></i>
+    		</span>
+    		<div class="fg-line">
+    			<input id="password" type="password" class="form-control" placeholder="密码" regex="^\w+"/>
+    		</div>
+    	</div>
+
+    	<div class="clearfix"></div>
+        <p class="error-red-text" hidden="hidden"></p>
+    	<div class="checkbox">
+    		<label>
+    			<input type="checkbox" value="" />
+    			<i class="input-helper">
+    				保持登录状态
+    			</i>
+    		</label>
+    	</div>
+
+    	<a id="signin-button" class="btn btn-login btn-danger btn-float">
+    		<i class="zmdi zmdi-arrow-forward"></i>
+    	</a>
+
+        <ul class="login-navigation">
+        	<li id="signin-1" class="bgm-red" data-ng-click="lctrl.login = 0; lctrl.register = 1">注册</li>
+        	<li id="signin-2" data-block="#l-forget-password" class="bgm-orange" data-ng-click="lctrl.login = 0; lctrl.forgot = 1">忘记密码?</li>
+        </ul>
+    </div>
+{#注册#}
+    <div class="lc-block" id="l-register" data-ng-class="{ 'toggled': lctrl.register === 1 }" data-ng-if="lctrl.register === 1" data-ng-init="tab=1">
+    	<h1 class="lean">注册</h1>
+        <div style="margin: 2em auto 1em auto;">
+            <button id="applicant-button" class="ui basic button" style="width:10em;" data-ng-click="tab=1">我是应聘者</button>
+            <button id="hr-button" class="ui basic button" style="width:10em;" data-ng-click="tab=2">我是HR</button>
+        </div>
+        <div data-ng-if="tab === 1">
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-account"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="can-username" class="form-control" placeholder="姓名" regex="^\w{3,16}$"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-email"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="can-mailaddress" class="form-control" placeholder="邮箱" regex="^\w+@\w+\.[a-zA-Z]+(\.[a-zA-Z]+)?$"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-male"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="password" id="can-password" class="form-control" placeholder="密码" regex="^\w+"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-male"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="password" id="can-password2" class="form-control" placeholder="再次输入密码" regex="^\w+"/>
+                </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+            <p class="error-red-text" hidden="hidden"></p>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value=""/>
+                    <i class="input-helper"></i>
+                    接受许可协议
+                </label>
+            </div>
+            <a id="signup-button-applicant" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
+        </div>
+        <div data-ng-if="tab===2">
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-accounts"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="hr-companyname" class="form-control" placeholder="公司名称" regex="^\w+"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-account"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="hr-username" class="form-control" placeholder="姓名" regex="^\w+"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-case"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="hr-job" class="form-control" placeholder="职位" regex="^\w+"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-email"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="hr-mailaddress" class="form-control" placeholder="邮箱" regex="^\w+@\w+\.[a-zA-Z]+(\.[a-zA-Z]+)?$"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-smartphone"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="text" id="hr-phone" class="form-control" placeholder="手机号" regex="^\w+"/>
+                </div>
+            </div>
+
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-male"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="password" id="hr-password" class="form-control" placeholder="密码" regex="^\w+"/>
+                </div>
+            </div>
+
+            <div class="input-group m-b-20">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-male"></i>
+                </span>
+                <div class="fg-line">
+                    <input type="password" id="hr-password2" class="form-control" placeholder="再次输入密码" regex="^\w+"/>
+                </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value=""/>
+                    <i class="input-helper"></i>
+                    接受许可协议
+                </label>
+            </div>
+            <a id="signup-button-hr" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
+        </div>
+
+
+    	<ul class="login-navigation">
+	      <li id="signup-1" data-block="#l-login" class="bgm-green" data-ng-click="lctrl.register = 0; lctrl.login = 1">登录</li>
+	      <li id="signup-2" data-block="#l-forget-password" class="bgm-orange" data-ng-click="lctrl.register = 0; lctrl.forgot = 1">忘记密码?</li>
+	    </ul>
+    </div>
+{#忘记密码#}
+    <div class="lc-block" id="l-forget-password" data-ng-class="{ 'toggled': lctrl.forgot === 1 }" data-ng-if="lctrl.forgot === 1">
+    	<h1 class="lean">忘记密码</h1>
+    	<p class="text-left">系统已经发送了一份邮件到您的邮箱，请在10分钟内输入邮件内的验证码，否则验证码将会过期</p>
+    	<div class="input-group m-b-20">
+	      <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+	      <div class="fg-line">
+                <input id="mailaddress" type="text" class="form-control" placeholder="请输入验证码" regex="^\w+@\w+\.[a-zA-Z]+(\.[a-zA-Z]+)?$"/>
+	      </div>
+
+	    </div>
+        <p class="error-red-text" hidden="hidden" style="position:relative;right:20px;"></p>
+	    <a id="forget-password-button1" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
+
+	    <ul class="login-navigation">
+	      <li data-block="#l-login" class="bgm-green" data-ng-click="lctrl.forgot = 0; lctrl.login = 1">登录</li>
+	      <li id="forget-2" data-block="#l-register" class="bgm-red" data-ng-click="lctrl.forgot = 0; lctrl.register = 1">注册</li>
+	    </ul>
+    </div>
+ </body>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/user.js'%}"></script>
+{% endblock %}

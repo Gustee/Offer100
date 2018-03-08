@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="login-content" data-ng-app="materialAdmin">
+ <head>
+     {% load staticfiles %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>登录注册</title>
+  <!-- Vendor CSS -->
+  <link href="{% static 'css/user/material-design-iconic-font.min.css'%}" rel="stylesheet" type="text/css">
+  <!-- CSS -->
+  <link href="{% static 'css/user/app.min.1.css'%}" rel="stylesheet" type="text/css">
+     <link href="{% static 'css/user/main.css'%}" rel="stylesheet" type="text/css">
+     <link href="{% static 'semantic/semantic.css'%}" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
+
+ </head>
+
+
+{% block body %}{% endblock %}
+
+
+ 	<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'semantic/semantic.js' %}"></script>
+    <script src="{% static 'semantic/semantic.min.js'%}"></script>
+	<!-- Angular -->
+	<script src="{% static 'js/user/bower_components/angular/angular.min.js' %}"></script>
+	<script src="{% static 'js/user/bower_components/angular-resource/angular-resource.min.js' %}"></script>
+	<script src="{% static 'js/user/bower_components/angular-animate/angular-animate.min.js' %}"></script>
+
+
+	<!-- Angular Modules -->
+	<script src="{% static 'js/user/bower_components/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+	<script src="{% static 'js/user/bower_components/angular-loading-bar/src/loading-bar.js' %}"></script>
+	<script src="{% static 'js/user/bower_components/oclazyload/dist/ocLazyLoad.min.js' %}"></script>
+	<script src="{% static 'js/user/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>
+
+	<!-- Common js -->
+	<script src="{% static 'js/user/bower_components/angular-nouislider/src/nouislider.min.js' %}"></script>
+	<script src="{% static 'js/user/bower_components/ng-table/dist/ng-table.min.js' %}"></script>
+
+	<!-- Placeholder for IE9 -->
+	<!--[if IE 9 ]>
+	    <script src="{% static 'js/user/bower_components/jquery-placeholder/jquery.placeholder.min.js' %}"></script>
+	<![endif]-->
+	<!-- App level -->
+	<script src="{% static 'js/user/app.js' %}"></script>
+	<script src="{% static 'js/user/controllers/main.js' %}"></script>
+	<script src="{% static 'js/user/controllers/ui-bootstrap.js' %}"></script>
+
+
+	<!-- Template Modules -->
+	<script src="{% static 'js/user/modules/form.js' %}"></script>
+</html>

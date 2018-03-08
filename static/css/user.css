@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 573684 */
+  src: url('//at.alicdn.com/t/font_573684_ejhst516wgb65hfr.eot');
+  src: url('//at.alicdn.com/t/font_573684_ejhst516wgb65hfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_573684_ejhst516wgb65hfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_573684_ejhst516wgb65hfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_573684_ejhst516wgb65hfr.svg#iconfont') format('svg');
+}
+.info-body{display: inline-block;background-color:#EEF3F8;width:100%;}
+.info-container{margin:30px auto 30px auto;width:700px;background-color:#ffffff;}
+.info-container-in{margin:0 50px 0 50px;width:600px;padding-bottom:20px;}
+.info-title{padding-top:20px;padding-bottom:20px;font-size: 20px;line-height: 34px;text-align: center;}
+.info-label{display:block;margin-bottom: 10px;}
+.info-input{border:1px #dcdcdc solid;border-radius:2px;padding:10px;margin-bottom:10px;}
+.info-name{display: inline-block;}
+.info-i-name{width:290px;height:40px;}
+.info-i-gender{display:inline-block;width:290px;height:40px;}
+.info-i-age{width:600px;}
+.info-i-degree{width:600px;}
+.info-i-country{width:600px;}
+.info-i-city{width:600px;}
+.info-i-phone{width:600px;}
+.info-next{width:600px;}
+.info-next-box{margin-top:20px;}
+.info-avatar{display:inline-block;position:absolute;width:290px;height:90px;}
+.info-avatar-text{margin-top:30px;padding-left:120px;display:inline-block;}
+.info-avatar-img{width:90px;height:90px;border-radius: 100px;float:right;background-color: #2bbbff;}
+

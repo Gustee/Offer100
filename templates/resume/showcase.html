@@ -1,0 +1,32 @@
+{% extends 'basic/tpl_logged.html' %}
+{% block body %}
+    {% load staticfiles %}
+		<div class="content">
+			<div class="left content">
+				<div class="complete">简历完成度</div>
+				<div>
+					<ul class="ul left">
+						<li class="li left"><a href="basic.html" class="ref left">个人信息</a></li>
+						<li class="li left"><a href="skill.html" class="ref left">技能</a></li>
+						<li class="li left"><a href="career.html" class="ref left">职业期望</a></li>
+						<li class="li left"><a href="experience.html" class="ref left">工作与教育经历</a></li>
+						<li class="li left"><a href="self_intro.html" class="ref left">个人描述</a></li>
+						<li class="li left"><a href="social_media.html" class="ref left">社交网络</a></li>
+						<li class="li left"><a href="showcase.html" class="ref left">个人作品</a></li>
+						<li class="li left"><a href="#" class="ref left">隐私保护</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="right content">
+				<div class="header-bar">个人作品</div>
+				<div class="ui divider"></div>
+				<form class="ui form">
+					<div class="field">
+						<img class="ui medium rounded image" src="image/icon5.png">
+					</div>
+					<div class="save"><button class="ui primary button" type="submit">保存</button></div>
+				</form>
+			</div>
+		</div>
+{% endblock %}

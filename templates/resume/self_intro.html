@@ -1,0 +1,33 @@
+{% extends 'basic/tpl_logged.html' %}
+{% block body %}
+    {% load staticfiles %}
+
+		
+			<div class="main ui container ">
+			  <div class="ui grid">
+			  <div class="four wide column">
+			    <div class="ui vertical fluid tabular menu">
+			      <a href="../basic" class="item">个人信息 </a>
+			      <a href="../skill" class="item">技能 </a>
+			      <a href="../career" class="item">职业期望 </a>
+			      <a href="../experience" class="item">工作于教育经历 </a>
+			      <a href="../self_intro" class="item active">个人描述</a>
+			      <a href="../social_media" class="item">社交网络 </a>
+			    </div>
+			  </div>
+		  	  <div class="twelve wide stretched column">
+		   		<div class="ui segment">
+			   	<div class="header-bar">工作与教育经历</div>
+				<div class="ui divider"></div>
+				<form class="ui form">
+					<div class="required field">
+						<label>畅所欲言，评价一下自己的技术或业务能力，聊聊自己的开源项目，理想中的团队，以及你的个人爱好等等</label>	
+						<textarea rows="8" cols="50" placeholder="个人评价、技术经历和细节、开源项目和个人作品、理想团队" name="self_intro"></textarea>
+					</div>
+					<div class="save"><button class="ui primary button" type="submit">保存</button></div>
+				</form>
+		   		</div>
+		      </div>
+			  </div>
+			</div>
+{% endblock %}

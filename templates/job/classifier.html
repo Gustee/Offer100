@@ -1,0 +1,102 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{##}
+{#<head>#}
+{#    #}
+{#    <meta charset="UTF-8">#}
+{#    <title>分类筛选</title>#}
+{#    #}
+{#</head>#}
+
+{#<body>#}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/basic/common.css' %}">
+
+    <div class="lclassifier">
+    <div class="filter">
+        <div class="lcontainer">
+            <div class="box">
+            <dl>
+                <dt>地点</dt>
+                <dd>
+                    <a href="#" rel="" name="city" class="all on">全国</a>
+                    <a href="#" rel="北京" name="city" class="sx_child">北京</a>
+                    <a href="#" rel="上海" name="city" class="sx_child">上海</a>
+                    <a href="#" rel="广州" name="city" class="sx_child">广州</a>
+                    <a href="#" rel="成都" name="city" class="sx_child">成都</a>
+                    <a href="#" rel="深圳" name="city" class="sx_child">深圳</a>
+                    <a href="#" rel="杭州" name="city" class="sx_child">杭州</a>
+                    <a href="#" rel="南京" name="city" class="sx_child">南京</a>
+                    <a href="#" rel="西安" name="city" class="sx_child">西安</a>
+                    <a href="#" rel="厦门" name="city" class="sx_child">厦门</a>
+                    <a href="#" rel="天津" name="city" class="sx_child">天津</a>
+                    <a href="#" rel="长沙" name="city" class="sx_child">长沙</a>
+
+                </dd>
+            </dl>
+            <dl>
+                <dt>项目阶段</dt>
+                <dd>
+                    <a href="#" rel="" name="stage" class="all on">不限</a>
+                    <a href="#" rel="未融资" name="stage" class="sx_child">未融资</a>
+                    <a href="#" rel="A轮" name="stage" class="sx_child">A轮</a>
+                    <a href="#" rel="B轮" name="stage" class="sx_child">B轮</a>
+                    <a href="#" rel="C轮" name="stage" class="sx_child">C轮</a>
+                    <a href="#" rel="D轮+" name="stage" class="sx_child">D轮+</a>
+                    <a href="#" rel="上市公司" name="stage" class="sx_child">上市公司</a>
+                    <a href="#" rel="不需要融资" name="stage" class="sx_child">不需要融资</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>所属行业</dt>
+                <dd>
+                    <a href="#" rel="" name="sector" class="all on">不限</a>
+                    <a href="#" rel="移动互联网" name="sector" class="sx_child">移动互联网</a>
+                    <a href="#" rel="电子商务" name="sector" class="sx_child">电子商务</a>
+                    <a href="#" rel="金融" name="sector" class="sx_child">金融</a>
+                    <a href="#" rel="企业服务" name="sector" class="sx_child">企业服务</a>
+                    <a href="#" rel="O2O" name="sector" class="sx_child">O2O</a>
+                    <a href="#" rel="游戏" name="sector" class="sx_child">游戏</a>
+                    <a href="#" rel="硬件" name="sector" class="sx_child">硬件</a>
+                    <a href="#" rel="其他行业" name="sector" class="sx_child">其他行业</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>学历要求</dt>
+                <dd>
+                    <a href="#" rel="" name="xl" class="all on">不限</a>
+                    <a href="#" rel="大专" name="xl" class="sx_child">大专</a>
+                    <a href="#" rel="本科" name="xl" class="sx_child">本科</a>
+                    <a href="#" rel="硕士" name="xl" class="sx_child">硕士</a>
+                    <a href="#" rel="博士" name="xl" class="sx_child">博士</a>
+                    <a href="#" rel="不要求" name="xl" class="sx_child">不要求</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>工作经验</dt>
+                <dd>
+                    <a href="#"  rel="" name="gj" class="all on">不限</a>
+                    <a href="#"  rel="应届毕业生" name="gj" class="sx_child">应届毕业生</a>
+                    <a href="#"  rel="3年及以下" name="gj" class="sx_child">3年及以下</a>
+                    <a href="#"  rel="3-5年" name="gj" class="sx_child">3-5年</a>
+                    <a href="#"  rel="5-10年" name="gj" class="sx_child">5-10年</a>
+                    <a href="#"  rel="10年以上" name="gj" class="sx_child">10年以上</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>发布时间</dt>
+                <dd>
+                    <a href="#" rel="" name="date" class="all on">全部</a>
+                    <a href="#" rel="最近一天" name="date" class="sx_child">最近一天</a>
+                    <a href="#" rel="最近三天" name="date" class="sx_child">最近三天</a>
+                    <a href="#" rel="最近一周" name="date" class="sx_child">最近一周</a>
+                    <a href="#" rel="最近一月" name="date" class="sx_child">最近一月</a>
+                </dd>
+            </dl>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+

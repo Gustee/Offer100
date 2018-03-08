@@ -1,0 +1,61 @@
+/* public */
+body{margin: 0px;padding:0;font-family: "Hiragino Sans GB", "microsoft yahei", helvetica, arial, sans-serif !important;color: #565a5c;font-size: 14px}
+.container{min-width: 1200px;}
+/* nav */
+.nav{min-width: 1300px;height: 50px;margin: 0 auto;background-color: #333;margin-bottom: 20px}
+.nav-container{width: 1200px;margin: 0 auto;}
+.nav .nav-logo{margin-left: 0;margin-right: 0;display: inline-block;float: left}
+.nav .nav-logo a{float: left;height: 30px;line-height: 20px;padding: 10px 0}
+.nav .nav-logo a img{width: 170px;}
+.nav .nav-list{display:block;margin-left: 220px;}
+.nav .nav-list ul{float:none;}
+.nav .nav-list ul li{display: inline-block;margin-right: 62px;}
+.nav .nav-list ul li a{line-height: 50px;color: #aaa}
+.nav .nav-list ul li a.active{color: #12c3f9}
+.nav .nav-btn{display: inline-block;float: right;margin: 2px 0 0 10px;}
+.nav ul li.nav-btn a{background-color: #AAB0BD;padding: 3px 15px;color:#000;border-radius: 3px}
+.nav ul li.nav-btn a.bg-c{background-color:#12c3f9 }
+
+/* content */
+.content{min-width: 1300px;margin: 0 auto }
+.content .content-title{text-align:center;height: 40px;line-height: 40px;font-size: 30px;margin: 40px 0 25px}
+.content .content-part{margin: 0 150px;text-align: center;border-bottom: 1px solid #D5D5D5;padding: 0 135px;}
+.content .content-part>div{display: inline-block}
+.content .content-part .part-all{display: inline-block;width:189px;margin: 10px 0;  padding: 0 80px;height: 35px;}
+.content .content-part .part-all:first-child{border-right: 1px solid #dcdcdc}
+.content .content-part div.selected{border-bottom: 4px solid #1CB6F8}
+.content .content-part .part{cursor: pointer;line-height: 40px;font-size: 24px}
+.content .content-part img{width: 40px;height: 40px;}
+.content .content-part div p{margin-top: -3px}
+.content .content-part div p,.content .content-part div img{display: inline-block;vertical-align:middle;}
+.content .content-part .part1 .grey{display: none}
+.content .content-part .part2 .color{display: none}
+.content .content-main{width: 700px;margin: 35px auto}
+/* qa */
+.content .question .content-container{padding: 20px 0;border-bottom: 1px dashed #ddd}
+.content .question .content-list .content-container:last-child{border-bottom: 2px solid #d5d5d5}
+.content .question .content-list .qa-question{color: #2082C4;margin-bottom: 20px}
+.content .question .content-list .qa-question>div{display: inline-block;vertical-align: top}
+.content .question .content-list .qa-answer>div{display: inline-block;vertical-align: top}
+.content .question .content-list  .qa-symbol{font-size: 16px;width: 40px;line-height: 22px}
+.content .question .content-list  .qa-content{line-height: 22px;width: 650px}
+.content .question .content-email{margin-top: 40px;border: 1px solid #d5d5d5;height: 70px;line-height: 70px;background-color: #f4f5f7}
+.content .question .content-email i.email-pic{display:inline-block;background-size:54px 54px;width:54px;height:54px;margin-left: 40px;margin-right:20px;background-image:url(https://snow-assets.b0.upaiyun.com/assets/qa-mail-icon-9e8723d81018d78132e8393ada2fef90.png);background-position: center;background-repeat: no-repeat;vertical-align: middle;}
+.content .question .content-email a{text-decoration: underline;color: #2082C4}
+/* process  */
+.content .process{width: 900px}
+.content .process img{width: 100%;text-align: center;margin: 0 10px}
+
+/* switch */
+.switch{text-align: center;overflow: hidden}
+.switch .switch-btn{height: 20px;line-height: 20px;padding: 0 3px 0 15px;display: inline-block;background-color: #333;color: #fff;border-radius: 10px;overflow: hidden}
+.switch .switch-btn i{background: url("img/arrowt.png")center no-repeat;background-size: 20px 20px;display: inline-block;width: 20px;height: 20px;vertical-align: middle;margin-left: 15px}
+
+/* footer */
+.footer{min-width: 1300px;background-color: #E7EBEC;margin-top: 100px;}
+.footer .foot{ padding: 20px 0;color: #868686;text-align: center;width: 1100px;margin: auto;color: #868686}
+.fl{float: left}
+.fl a{color: #868686;font-size: 14px;display: block;float: left;width: 75px;border-right: 1px solid #cecece;}
+.fl a:hover{color: #12c3f9}
+.fr{float: right;margin-right: 50px}
+.clear{height: 20px}

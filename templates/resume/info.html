@@ -1,0 +1,228 @@
+{% extends 'basic/tpl_logged.html' %}
+{% block body %}
+    {% load staticfiles %}
+
+		<div class="main ui container" style="width: 60%;">
+			<div class="header-bar">企业信息</div>
+			<div class="ui divider"></div>
+			<form class="ui form">
+				<div class="field">
+					<div class="ui label">公司Logo：</div>
+					<img class="ui avatar small circular image" name="logo" src="http://www.semantic-ui.cn/images/wireframe/square-image.png">
+					<div class="ui primary button" style="	position: absolute; top:150px; left: 280px;">上传</div>
+				</div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司全称</div>
+					<div class="ui avatar input" style="float: right; width: 780px;">
+						<input type="text" name="company_name" placeholder="公司全称">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司官网</div>
+					<div class="ui avatar input" style="float: right; width: 780px;">
+						<input type="text" name="company_site" placeholder="公司官网">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司简介</div>
+					<div class="ui avatar input" style="float: right; width: 780px;">
+						<input type="text" name="company_shortintro" placeholder="公司简介">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">所在城市</div>
+					<div class="ui fluid search selection dropdown" style="float: right; width: 780px;">
+					        <input type="hidden" name="city">
+					        <i class="dropdown icon"></i>
+					        <div class="default text">选择城市</div>
+					        <div class="menu">
+							    <div class="item" data-value="bj">北京</div>
+							    <div class="item" data-value="sh">上海</div>
+							    <div class="item" data-value="gz">广州</div>
+							    <div class="item" data-value="sz">深圳</div>
+							    <div class="item" data-value="wh">武汉</div>
+							    <div class="item" data-value="hz">杭州</div>
+							    <div class="item" data-value="nj">南京</div>
+							    <div class="item" data-value="hk">香港</div>
+							    <div class="item" data-value="af">其他</div>
+							</div>
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司地址</div>
+					<div class="ui avatar input" style="float: right; width: 780px;">
+						<input type="text" name="company_addr" placeholder="公司地址">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">所在领域</div>
+					<div class="ui fluid search selection dropdown" style="float: right; width: 780px;">
+					        <input type="hidden" name="field">
+					        <i class="dropdown icon"></i>
+					        <div class="default text">选择领域</div>
+					        <div class="menu">
+							    <div class="item" data-value="yd">移动互联网</div>
+							    <div class="item" data-value="dz">电子商务</div>
+							    <div class="item" data-value="wh">文化娱乐</div>
+							    <div class="item" data-value="yx">游戏</div>
+							    <div class="item" data-value="yj">硬件</div>
+							    <div class="item" data-value="jr">金融</div>
+							    <div class="item" data-value="tx">通讯</div>
+							    <div class="item" data-value="yl">医疗</div>
+							    <div class="item" data-value="yq">企业服务</div>
+							    <div class="item" data-value="gg">广告营销</div>
+							    <div class="item" data-value="cx">出行旅游</div>
+							    <div class="item" data-value="sj">数据与信息服务</div>
+							    <div class="item" data-value="yd">运动健康</div>
+							    <div class="item" data-value="fdc">房地产</div>
+							    <div class="item" data-value="jy">教育</div>
+							    <div class="item" data-value="yl">医疗</div>
+							    <div class="item" data-value="nr">内容生产与分发</div>
+							    <div class="item" data-value="O2O">O2O</div>
+							    <div class="item" data-value="sj">社交</div>
+							    <div class="item" data-value="zp">招聘</div>
+							    <div class="item" data-value="other">其他</div>
+							</div>
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司规模</div>
+					<div class="ui fluid search selection dropdown" style="float: right; width: 780px;">
+					        <input type="hidden" name="size">
+					        <i class="dropdown icon"></i>
+					        <div class="default text">选择规模</div>
+					        <div class="menu">
+							    <div class="item" data-value="15-">少于15人</div>
+							    <div class="item" data-value="50-">15-50人</div>
+							    <div class="item" data-value="150-">50-150人</div>
+							    <div class="item" data-value="500-">150-500人</div>
+							    <div class="item" data-value="500+">500人以上</div>
+							</div>
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">融资阶段</div>
+					<div class="ui fluid search selection dropdown" style="float: right; width: 780px;">
+					        <input type="hidden" name="financing">
+					        <i class="dropdown icon"></i>
+					        <div class="default text">选择融资阶段</div>
+					        <div class="menu">
+							    <div class="item" data-value="no_need">不需要融资</div>
+							    <div class="item" data-value="not_yet">尚未融资</div>
+							    <div class="item" data-value="angel">天使轮融资</div>
+							    <div class="item" data-value="A">A轮融资</div>
+							    <div class="item" data-value="B">B轮融资</div>
+							    <div class="item" data-value="C">C轮融资</div>
+							    <div class="item" data-value="D">D轮融资</div>
+							</div>
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">成立时间</div>
+					<div class="ui fluid search selection dropdown" style="float: right; width: 780px;">
+					        <input type="hidden" name="time">
+					        <i class="dropdown icon"></i>
+					        <div class="default text">选择成立时间</div>
+					        <div class="menu">
+							    <div class="item" data-value="2018">2018</div>
+							    <div class="item" data-value="2017">2017</div>
+							    <div class="item" data-value="2016">2016</div>
+							    <div class="item" data-value="2015">2015</div>
+							    <div class="item" data-value="2014">2014</div>
+							    <div class="item" data-value="2013">2013</div>
+							    <div class="item" data-value="2012">2012</div>
+							    <div class="item" data-value="2011">2011</div>
+							    <div class="item" data-value="2010">2010</div>
+							    <div class="item" data-value="2009">2009</div>
+							    <div class="item" data-value="2008">2008</div>
+							    <div class="item" data-value="2007">2007</div>
+							    <div class="item" data-value="2006">2006</div>
+							    <div class="item" data-value="2005">2005</div>
+							    <div class="item" data-value="2004">2004</div>
+							    <div class="item" data-value="2003">2003</div>
+							    <div class="item" data-value="2002">2002</div>
+							    <div class="item" data-value="2001">2001</div>
+							    <div class="item" data-value="2000">2000</div>
+							    <div class="item" data-value="2000-">2000以前</div>
+							</div>
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">开发者规模</div>
+					<div class="ui fluid search selection dropdown" style="float: right; width: 780px;">
+					        <input type="hidden" name="developer">
+					        <i class="dropdown icon"></i>
+					        <div class="default text">选择开发者规模</div>
+					        <div class="menu">
+							    <div class="item" data-value="5-">少于5人</div>
+							    <div class="item" data-value="15-">6-15人</div>
+							    <div class="item" data-value="50-">15-50人</div>
+							    <div class="item" data-value="200-">51-200人</div>
+							    <div class="item" data-value="200+">200人以上</div>
+							</div>
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">一句话介绍</div>
+					<div class="ui avatar input" style="float: right; width: 780px;">
+						<input type="text" name="short_intro" placeholder="一句话介绍">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司技术</div>
+					<div class="ui avatar input" style="float: right; width: 780px;">
+						<input type="text" name="technology" placeholder="填写技术名词，用「；」隔开">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司介绍</div>
+					<textarea rows="8" cols="50" name="company_intro" placeholder="详细介绍一下公司发展历程、所获荣耀、企业故事等内容，将有助于候选人迅速了解公司并作出决定。" style="margin-left: 7px;"></textarea>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">产品介绍</div>
+					<textarea rows="8" cols="50" name=product_intro placeholder="简述产品的理念及亮点，勾起候选人的兴趣并打动候选人加入团队。" style="margin-left: 7px;"></textarea>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">公司福利</div>
+					<select name="skills" multiple="" name="welfare" class="ui fluid dropdown" style="margin-left: 7px;">
+						<option value="">添加多个标签</option>
+						<option value="txgz">弹性工作</option>
+						<option value="ndsx">年底双薪</option>
+						<option value="dxnj">带薪年假</option>
+						<option value="dqtj">定期体检</option>
+						<option value="nzfh">年终分红</option>
+						<option value="hdpx">很多培训</option>
+						<option value="wcbt">午餐补贴</option>
+						<option value="zxjj">专项奖金</option>
+						<option value="jtbt">交通补贴</option>
+						<option value="jxjj">绩效奖金</option>
+						<option value="gqqq">股权期权</option>
+					</select>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="field">
+					<div class="ui label" style="margin-top:5px;">媒体报道链接地址</div>
+					<div class="ui avatar input" style="float: right; width: 730px;">
+						<input type="text" name="report" placeholder="http://">
+					</div>
+				</div>
+				<div style="height: 15px;"></div>
+				<div class="save"><button class="ui primary button" type="submit">保存</button></div>
+			</form>
+
+		</div>
+{% endblock %}

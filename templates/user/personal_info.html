@@ -1,0 +1,51 @@
+{% extends 'basic/tpl_0.html' %}
+{% block body %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
+    <div class="info-body">
+    <div class="info-container">
+        <div class="info-container-in">
+            <div class="info-title">
+                完善基本信息
+            </div>
+            <div class="info-name">
+                <label class="info-label" for="info_name">姓名</label>
+                <input class="info-input info-i-name" id="info_name" name="info[name]" placeholder="请输入中文姓名" type="text">
+            </div>
+            <div class="info-avatar">
+                <div class="info-avatar-text">上传头像</div>
+                {% load staticfiles %}
+            <img class="info-avatar-img" src="{% static 'img/avatar.png' %}">
+            </div>
+            <div class="info-sex">
+                <label class="info-label">性别</label>
+                <div class="info-input info-i-gender">男</div>
+                <div class="info-input info-i-gender">女</div>
+            </div>
+            <div class="info-age">
+                <label class="info-label" for="info_age">年龄</label>
+                <input class="info-input info-i-age" id="info_age" name="info[age]" placeholder="请输入年龄" type="text">
+            </div>
+            <div class="info-degree">
+                <label class="info-label" for="info_degree">学历</label>
+                <input class="info-input info-i-degree" id="info_degree" name="info[degree]" placeholder="请输入学历" type="text">
+            </div>
+            <div class="info-country">
+                <label class="info-label" for="info_country">所在国家/地区</label>
+                <input class="info-input info-i-country" id="info_country" name="info[country]" placeholder="请输入所在国家/地区" type="text">
+            </div>
+            <div class="info-city">
+                <label class="info-label" for="info_city">性别</label>
+                <input class="info-input info-i-city" id="info_city" name="info[city]" placeholder="请输入所在城市" type="text">
+            </div>
+            <div class="info-phone">
+                <label class="info-label" for="info_phone">手机</label>
+                <input class="info-input info-i-phone" id="info_phone" name="info[phone]" placeholder="请输入手机号" type="text">
+            </div>
+            <div class="info-next-box">
+                <button class="ui primary button info-next">下一步</button>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

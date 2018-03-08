@@ -1,0 +1,18 @@
+{% extends 'user/tpl_login.html' %}
+{% block body %}
+<body class="login-content" >
+{#    查收确认信#}
+    <div class="lc-block toggled" id="l-login">
+    	<h1 class="lean">查收确认信</h1>
+    	<div class="input-group m-b-20" style="margin-top: 2em;font-size: medium;">
+            <p>确认信已经发到你的邮箱{{ email }}，你需要点击邮件中的确认链接来完成注册。</p>
+    	</div>
+        <div class="input-group m-b-20" style="margin-top: 2em;font-size: small;">
+
+                <a>若已确认完成，可点击这个链接进行跳转</a>
+
+    	</div>
+
+    </div>
+</body>
+{% endblock %}

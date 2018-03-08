@@ -1,0 +1,19 @@
+{% extends 'basic/tpl_0.html' %}
+{% block body %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
+
+    <div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a class="active item">个人简历 </a>
+      <a class="item">照片 </a>
+      <a class="item">公司 </a>
+      <a class="item">Links </a>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">这是可拉伸的网格列。此片段总是会匹配标签切换页的高度 </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'basic/tpl_logged.html' %}
+{% block body %}
+	<form class="ui form">
+    <div class="required field">
+      <label>姓氏</label>
+      <input type="text" placeholder="全名">
+    </div>
+    <div class="required inline field">
+      <div class="ui checkbox">
+        <input type="checkbox" tabindex="0" class="hidden">
+        <label>我同意上述条款以及条件。</label>
+      </div>
+    </form>
+
+    <div class="required field">
+		<label class="ui label" style="margin-top:5px;">一句话介绍</label>
+		<label>yijuhua</label>}
+		<div class="ui avatar input" style="float: right; width: 780px;">
+			<input type="text" name="short_intro" placeholder="一句话介绍">
+		</div>
+	</div>
+{% endblock %}

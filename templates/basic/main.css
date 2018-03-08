@@ -1,0 +1,142 @@
+/* 2016.7.13 */
+/* 公用 */
+body{margin: 0px;  font-family: "Hiragino Sans GB", "microsoft yahei", helvetica, arial, sans-serif !important;color: #565a5c }
+/* head */
+.head {width: 100%;height: 635px  }
+.head-pic {min-width: 1200px;  height: 635px;  background: url(https://offer-assets.b0.upaiyun.com/assets/index/banner-47d178d509530f09590e1cfab41a5a0d.jpg) top center no-repeat;  background-size: 2000px auto  }
+.head-first {width:100% height: 100px  }
+.head-first img {  width: 170px;  height: 34px;  margin-top: 32px;  margin-left: 48px  }
+.daohang { float: right; margin-top: 35px; margin-right: 48px; display: inline-block  }
+.daohang ul {margin-bottom: 10px; margin-top: 0; padding-left: 40px  }
+.daohang ul li {font-size: 17px;display: inline;  opacity: 1;  margin-left: 24px;  margin-right: 24px;  padding-bottom: 5px;  color: #565a5c;  }
+.daohang ul li a {line-height: 1.428;font-family: "Hiragino Sans GB", "microsoft yahei", helvetica, arial, sans-serif !important;color: #333333;display: inline-block;  }
+.daohang ul li a:hover{opacity:0.5}
+.daohang ul li a.getA {width: 80px;  background-color: #000000;  height: 30px;  line-height: 30px;  text-align: center;  border-radius: 15px;  color: #ffffff;  }
+.daohang ul li a.getB {width: 80px;  background-color: #12c3f9;  height: 30px;  line-height: 30px;text-align: center;border-radius: 15px;color: #ffffff;  }
+.banner-text{margin:auto;display: block;width: 800px;padding-top: 180px;text-align: center}
+.banner-text .content {padding-bottom: 25px;  }
+.banner-text .content .title{font-family:inherit;font-size: 38px;line-height: 23px;margin-bottom: 0px;margin-top: 20px;font-weight:500}
+.banner-text .content .subtitle{margin-top: 15px;font-size: 21px;line-height: 35px;margin: 15px 0 10px 0;color: #333333}
+.banner-btn{display:block;border-radius:2px;text-align: center;cursor: pointer;background-color: #12c3f9;width: 168px;height: 40px;line-height: 42px;margin: auto;font-size: 18px;}
+.banner-btn a{color: #fff}
+.banner-text .content div.banner-btn:hover{transition: all 0.2s ease-in;background-color: #428bca}
+/* news */
+.news{min-width: 1200px;height: 130px;padding: 40px 0;}
+.news .news-content{margin: 0 auto;max-width: 1100px;}
+.news .news-content .item{width: 194px}
+.news .news-content a{display: inline-block;height: 110px;padding-left: 40px;padding-right:40px;background-color: #fff;float: left;text-align: center;border-right: 1px solid #ccc;}
+.news .news-content a:last-child{border-right: none}
+.news .news-content a img{width: 70px;height: 70px;margin: 0 auto}
+.news .news-content a .pic1{display: block}
+.news .news-content a .pic2{display: none;position: relative}
+.news .news-content a .news-text{color: #9c9c9c}
+.news .news-content a .qrcode{display: none;position: absolute;top:500px;left: 1000px}
+.news .news-content a .qrcode img{width: 165px;height: 165px;}
+
+/* process */
+.process{width:100%;background-color: #f6f6f6;}
+.inner{height: 405px;padding-top: 35px;padding-bottom: 60px;min-width: 1200px}
+.c-box{margin-bottom: 55px}
+.c-box h1{text-align: center;font-size: 30px;color: inherit}
+.c-box h4{text-align: center;margin-top: 10px}
+.c-box .step{max-width: 1100px;margin: auto;padding-top: 35px}
+.c-box .step .singleblock{display: inline-block;width:25%;float: left}
+.c-box .step .singleblock .step-image{margin:auto;width: 160px;height: 80px;text-align: center}
+.c-box .step .singleblock .step-image img{width: 115px;height: 74px;}
+.c-box .step .singleblock .step-title{margin: 10px 0;line-height: 22px;text-align: center;font-size: 16px;color: #565a5c}
+.c-box .step .singleblock .hidden-xs .step-num{padding-top: 10px;padding-bottom: 10px;position: relative;font-size: 24px;text-align: center;color: #577088}
+.c-box .step .singleblock .hidden-xs .right-line {height: 50px;position: absolute;left: 55%;right: 0px;top:15px;}
+.c-box .step .singleblock .hidden-xs .left-line {height: 50px;position: absolute;left:0;right:55%;top:15px;}
+.c-box .step .singleblock .hidden-xs hr{border:1px solid #999}
+.c-box .step .singleblock .step-detail{width: 225px;margin: 0 auto;font-size: 14px;line-height: 27px;color: #999;}
+
+
+/* Company */
+.company{min-width: 1200px;height: 590px;padding-top: 40px}
+.company .company-title{font-size: 30px;text-align: center;margin-top: 20px;margin-bottom: 10px}
+.company .company-list{width: 80%;margin: 0 10%;margin-top: 90px;}
+.company .company-list .imgN{width: 20%;height: 50px;margin-bottom: 70px;float: left;}
+.company .company-list .imgN .grey-img0{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 0 no-repeat}
+.company .company-list .imgN .color-img0{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 0 no-repeat;display: none}
+.company .company-list .imgN .grey-img1{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -48px no-repeat}
+.company .company-list .imgN .color-img1{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -48px no-repeat;display: none}
+.company .company-list .imgN .grey-img2{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -96px no-repeat}
+.company .company-list .imgN .color-img2{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -96px no-repeat;display: none}
+.company .company-list .imgN .grey-img3{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -144px no-repeat}
+.company .company-list .imgN .color-img3{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -144px no-repeat;display: none}
+.company .company-list .imgN .grey-img4{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -192px no-repeat}
+.company .company-list .imgN .color-img4{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -192px no-repeat;display: none}
+.company .company-list .imgN .grey-img5{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 0 no-repeat}
+.company .company-list .imgN .color-img5{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 0 no-repeat;display: none}
+.company .company-list .imgN .grey-img6{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -48px no-repeat}
+.company .company-list .imgN .color-img6{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -48px no-repeat;display: none}
+.company .company-list .imgN .grey-img7{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -96px no-repeat}
+.company .company-list .imgN .color-img7{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -96px no-repeat;display: none}
+.company .company-list .imgN .grey-img8{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -144px no-repeat}
+.company .company-list .imgN .color-img8{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -144px no-repeat;display: none}
+.company .company-list .imgN .grey-img9{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -192px no-repeat}
+.company .company-list .imgN .color-img9{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -192px no-repeat;display: none}
+.company .company-list .imgN .grey-img10{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 0 no-repeat}
+.company .company-list .imgN .color-img10{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 0 no-repeat;display: none}
+.company .company-list .imgN .grey-img11{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -48px no-repeat}
+.company .company-list .imgN .color-img11{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -48px no-repeat;display: none}
+.company .company-list .imgN .grey-img12{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -96px no-repeat}
+.company .company-list .imgN .color-img12{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -96px no-repeat;display: none}
+.company .company-list .imgN .grey-img13{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -144px no-repeat}
+.company .company-list .imgN .color-img13{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -144px no-repeat;display: none}
+.company .company-list .imgN .grey-img14{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -192px no-repeat}
+.company .company-list .imgN .color-img14{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -192px no-repeat;display: none}
+.company .company-list .imgN .grey-img15{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 0 no-repeat}
+.company .company-list .imgN .color-img15{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 0 no-repeat;display: none}
+.company .company-list .imgN .grey-img16{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -48px no-repeat}
+.company .company-list .imgN .color-img16{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -48px no-repeat;display: none}
+.company .company-list .imgN .grey-img17{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -96px no-repeat}
+.company .company-list .imgN .color-img17{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -96px no-repeat;display: none}
+.company .company-list .imgN .grey-img18{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -144px no-repeat}
+.company .company-list .imgN .color-img18{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -144px no-repeat;display: none}
+.company .company-list .imgN .grey-img19{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-grey-851c3d65675f81777a4366b34f11eed7.png") 0 -192px no-repeat}
+.company .company-list .imgN .color-img19{width: 190px;height: 48px;text-align: center;margin: 0 auto;background: url("https://offer-assets.b0.upaiyun.com/assets/index/companies-352cafd7b601691fff5c9ffb61d3cb12.png") 0 -192px no-repeat;display: none}
+
+/* 轮播 */
+.lunbo{min-width: 1200px;height: 365px;background:url("img/lb-bg.jpg")no-repeat;position: relative;color: #FFFFFF;font-size: 16px}
+.lunbo ul li{opacity: 0}
+.lunbo ul li.show{opacity: 1}
+.lunbo a.left-btn{width:25px;height: 50px;display: inline-block;position: absolute;left:33px;top:150px;background: url("img/arrow%20-%20left.png") 0 0 no-repeat;background-size: 25px 50px}
+.lunbo a.right-btn{width:25px;height: 50px;display: inline-block;position: absolute;right:33px;top:150px;background: url("img/arrow%20-%20right.png") 0 0 no-repeat;background-size: 25px 50px}
+.lunbo .header-pic{width: 173px;height: 173px;float: left;padding: 10px;border: 1px solid #fff;border-radius: 50%;overflow: hidden;position: absolute;left: 15%;top: 50%;margin-top: -100px}
+.lunbo .header-pic img{width: 100%;height: 100%;border-radius: 50%;}
+.lunbo .recommendation{position: absolute;left: 40%;top:30%;}
+.lunbo .recommendation p{margin:0 0 10px;}
+.lunbo .basic-info{color: gainsboro;position: absolute;left: 60%;top:65%}
+.show{opacity: 1}
+
+/* apply */
+.app-con{width: 100%;background: #fff;height: 189px;min-width: 1200px}
+.app-con .app-text{text-align: center;font-size: 22px;padding-top: 60px;color: #58616d;font-weight: 400}
+.app-con .banner-btn{margin-top: 40px}
+
+/* footer */
+.footer{background-color: #000;min-width: 1200px;line-height: 80px}
+.footer .main-container{max-width: 1440px;margin: 0 auto}
+.footer .main-container .links{display: inline-block;padding-left: 60px}
+.footer .main-container .links ul li{list-style: none;display: inline-block;font-size: 16px;margin-right: 15px}
+.footer .main-container .links ul li a{color: #999;display: inline-block}
+.footer .main-container .links ul li a:hover{text-decoration: underline}
+.footer .main-container .links ul li span{display: inline-block}
+.footer .main-container .links ul li #weixinqr{position: relative}
+.footer .main-container .links ul li #weixinqr img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #weixinqr .weixin{display: none}
+.footer .main-container .links ul li #weixinqr .qrcode{display: none;position: absolute;top:-220%;left: -150%}
+.footer .main-container .links ul li #weixinqr .qrcode img{;width: 165px;height: 165px;}
+.footer .main-container .links ul li #weibo img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #weibo .weibo{display: none}
+.footer .main-container .links ul li #blog img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #blog .blog{display: none}
+.footer .main-container .links ul li #linkedin img{width: 40px;height: 40px;vertical-align: middle;}
+.footer .main-container .links ul li #linkedin .linkedin{display: none}
+#weibo,#blog,#linkedin{margin-left: 30px}
+
+.footer .main-container .copyright{display: inline-block;float: right;color: #999;padding-right: 40px;font-size: 16px}
+
+.container{width:1240px;margin:0 auto 0 auto;background-color: #2aabd2}
+.grey-bar{width:100%;height:300px;background-color: #e3e3e3}

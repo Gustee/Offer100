@@ -1,0 +1,17 @@
+.filter a { color: #444; text-decoration: none; }
+.lcontainer { width: 1200px; margin: 0 auto;font-size: 16px; }
+.clearfix:after { content: " "; display: block; clear: both; }
+.filter { padding-top: 15px; padding-bottom: 15px; background: #f9fbfe }
+.filter .box { padding: 24px 24px 10px 24px; border: 1px solid #dcdcdc; background-color: #fff; }
+.filter .title-h { font-size: 14px; border-bottom: 1px solid #dcdcdc; padding-bottom: 10px }
+.filter dl { position: relative; margin-bottom: 10px }
+.filter dl:after { content: ""; display: block; clear: both }
+.filter dl dt { position: absolute; top: 0; left: 0; font-weight: 700 ;width:10em;}
+.filter dl dd { padding-left: 85px;}
+.filter dl dd a { margin-right: 20px; margin-bottom: 4px; display: inline-block }
+/*.filter dl dd a.on { font-weight: 700; color: #477fd2; }*/
+.filter dl dd a.on { font-weight: 700; color: #ffffff;background-color: #00BDD7;border:2px #00BDD7 solid;border-left-width:7px;border-right-width:7px;}
+.lclassifier{width:100%;padding: 0 auto;overflow: hidden;}
+
+.filter-strip{height: 40px; width: 1200px; margin: 0 auto;font-size: 16px;margin-bottom: 15px;padding: 10px; border: 1px solid #dcdcdc; background-color: #fff;}
+

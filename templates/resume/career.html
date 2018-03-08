@@ -1,0 +1,215 @@
+{% extends 'basic/tpl_logged.html' %}
+{% block body %}
+    {% load staticfiles %}
+{#	<script src="http://www.semantic-ui.cn/javascript/docs.js"></script>  #}
+{#	<script src=" http://www.semantic-ui.cn/javascript/menu.js"></script>#}
+		<div class="main ui container ">
+			  <div class="ui grid">
+			  <div class="four wide column">
+			    <div class="ui vertical fluid tabular menu">
+			      <a href="../basic" class="item">个人信息 </a>
+			      <a href="../skill" class="item">技能 </a>
+			      <a href="../career" class="item active">职业期望 </a>
+			      <a href="../experience" class="item">工作于教育经历 </a>
+			      <a href="../self_intro" class="item">个人描述</a>
+			      <a href="../social_media" class="item">社交网络 </a>
+			    </div>
+			  </div>
+			  <div class="twelve wide stretched column">
+			  	<div class="ui segment">
+			   		<div class="header-bar">职业期望</div>
+					<div class="ui divider"></div>
+					<form class="ui form">
+						<div class="required field">
+							<label>您感兴趣的工作类型</label>
+							 <div class="grouped fields">
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="type" checked="" tabindex="0" class="hidden">
+							        <label>国内或海外全职工作</label>
+							      </div>
+							    </div>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="type" tabindex="0" class="hidden">
+							        <label>全职工作或远程项目</label>
+							      </div>
+							    </div>
+							</div>
+						</div>
+						<div class="required field">
+							<label>以下哪项最符合你目前的状态？</label>
+							 <div class="grouped fields">
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="state" checked="" tabindex="0" class="hidden">
+							        <label>先看机会，再决定换工作</label>
+							      </div>
+							    </div>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="state" tabindex="0" class="hidden">
+							        <label>决定换工作，还没有offer</label>
+							      </div>
+							    </div>
+							     <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="state" tabindex="0" class="hidden">
+							        <label>已经有了offer，再看看有没有更好的</label>
+							      </div>
+							    </div>
+							     <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="state" tabindex="0" class="hidden">
+							        <label>短期内没有换工作的打算</label>
+							      </div>
+							    </div>
+							</div>
+						</div>
+						<div class="required field">
+							<label>拿到满意的offer后你预计多久可以入职？</label>
+							 <div class="grouped fields">
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="entry" checked="" tabindex="0" class="hidden">
+							        <label>随时可以入职</label>
+							      </div>
+							    </div>
+							    <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="entry" tabindex="0" class="hidden">
+							        <label>一周</label>
+							      </div>
+							    </div>
+							     <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="entry" tabindex="0" class="hidden">
+							        <label>一个月</label>
+							      </div>
+							    </div>
+							     <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="entry" tabindex="0" class="hidden">
+							        <label>两个月</label>
+							      </div>
+							    </div>
+							     <div class="field">
+							      <div class="ui radio checkbox">
+							        <input type="radio" name="entry" tabindex="0" class="hidden">
+							        <label>不确定</label>
+							      </div>
+							    </div>
+							</div>
+						</div>
+						<div class="required field">
+							<label>如果全职工作，你期望在哪里工作？</label>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="beijing">
+								  <label>北京</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="shanghai">
+								  <label>上海</label>
+								</div>
+								<div class="ui checkbox">
+								  <input type="checkbox" name="shenzhen">
+								  <label>深圳</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="guangzhou">
+								  <label>广州</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="hangzhou">
+								  <label>杭州</label>
+								</div>
+								<div class="ui checkbox">
+								  <input type="checkbox" name="nanjing">
+								  <label>南京</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="suzhou">
+								  <label>苏州</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="xiamen">
+								  <label>厦门</label>
+								</div>
+								<div class="ui checkbox">
+								  <input type="checkbox" name="zhuhai">
+								  <label>珠海</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="chengdu">
+								  <label>成都</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="wuhan">
+								  <label>武汉</label>
+								</div>
+								<div class="ui checkbox">
+								  <input type="checkbox" name="xi'an">
+								  <label>西安</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="hongkong">
+								  <label>香港</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+								  <input type="checkbox" name="other">
+								  <label>其他</label>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<label>你目前的税前收入是？</label>
+							<div style="float: left; ">
+								<select class="ui fluid dropdown" name="wage_y_m">
+	    							<option value="1">月薪</option>
+					    			<option value="2">年薪</option>
+								</select>
+							</div>
+							<div style="float: left;">
+								<div class="ui input left icon" id="wage">
+									<i class="yen icon"></i>
+									<input type="text" name="wage">
+								</div>
+							</div>
+							<div style="float: left; margin-top:10px; margin-left: 10px;"><label>W</label></div>
+						</div></br>
+						<div style="height: 25px;"></div>
+						<div class="required field">
+							<label>你对下一份工作的最低年薪要求是？</label>
+							<div style="float: left;">
+								<div class="ui input left icon" id="wage">
+									<i class="yen icon"></i>
+									<input type="text" name="wage">
+								</div>
+							</div>
+							<div style="float: left; margin-top:10px; margin-left: 10px;"><label>/年</label></div>
+						</div></br>	
+						<div style="height: 25px;"></div>
+						<div class="field">
+							<label>对下一份工作的其他要求？</label>
+							<textarea rows="8" cols="50" placeholder="例如：公司规模、行业、工作地点、团队结构等"></textarea>
+						</div>
+						<div class="save"><button class="ui primary button" type="submit">保存</button></div>
+						</form>
+			   </div>
+			  </div>
+			</div>
+	</div>
+{% endblock %}

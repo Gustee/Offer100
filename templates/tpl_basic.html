@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"
+    <link rel="stylesheet" type="text/css" href="{% static 'css/basic/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/basic/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/basic/test.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.js' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

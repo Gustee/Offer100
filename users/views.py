@@ -1,85 +1,128 @@
 from django.contrib.auth.hashers import make_password
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, reverse
 from django.views.generic.base import View
 from django.contrib import auth
 from .models import *
 from .forms import *
 from utils.email_send import send_register_email
+import json
 # Create your views here.
 
 
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'basic/index.html')
 
 
 class RegisterView(View):
+    """
+    用户注册
+    """
     def get(self, request):
-        candidate_register_form = CandidateRegisterForm()
-        hr_register_form = HrRegisterForm()
-        return render(request, 'register.html',
-                      {'candidate_register_form': candidate_register_form,
-                       'hr_register_form': hr_register_form})
+        pass
+        # candidate_register_form = CandidateRegisterForm()
+        # hr_register_form = HrRegisterForm()
+        # return render(request, 'register.html',
+        #               {'candidate_register_form': candidate_register_form,
+        #                'hr_register_form': hr_register_form})
 
     def post(self, request):
-        if request.POST.get('user_type') == 'candidate':
-            candidate_register_form = CandidateRegisterForm(request.POST)
-            hr_register_form = HrRegisterForm()
-            if candidate_register_form.is_valid():
-                username = request.POST.get('email', '')
-                if User.objects.filter(username=username):
-                    return render(request, 'register.html',
-                                  {'candidate_register_form': candidate_register_form,
-                                   'hr_register_form': hr_register_form,
-                                   'msg': '该邮箱已注册'})
-                password = request.POST.get('password', '')
-                new_user = User.objects.create(username=username)
+        if request.POST.get('type') == 'applicant':
+            name = request.POST.get('username')
+            password = request.POST.get('password')
+            email = request.POST.get('mailaddress')
+            if User.objects.filter(username=email):
+                ret = {'msg': 1}
+                return HttpResponse(json.dumps(ret))
+            else:
+                new_user = User.objects.create(username=email)
                 new_user.password = make_password(password)
                 new_user.is_active = True
                 new_user.save()
-                candidate = Candidate.objects.create(user=new_user)
+                candidate = Candidate.objects.create(user=new_user, name=name)
                 candidate.save()
                 auth.login(request, new_user)
-                send_register_email(username, "register")
-                return render(request, 'talent_confirm_mail.html', {'email':username})
-
-
-            else:
-                return render(request, 'register.html',
-                          {'candidate_register_form': candidate_register_form,
-                           'hr_register_form': hr_register_form})
+                #send_register_email(email, 'register')
+                ret = {'msg': 0, 'email': email}
+                return HttpResponse(json.dumps(ret))
+            # candidate_register_form = CandidateRegisterForm(request.POST)
+            # hr_register_form = HrRegisterForm()
+            # if candidate_register_form.is_valid():
+            #     username = request.POST.get('email', '')
+            #     if User.objects.filter(username=username):
+            #         return render(request, 'register.html',
+            #                       {'candidate_register_form': candidate_register_form,
+            #                        'hr_register_form': hr_register_form,
+            #                        'msg': '该邮箱已注册'})
+            #     password = request.POST.get('password', '')
+            #     new_user = User.objects.create(username=username)
+            #     new_user.password = make_password(password)
+            #     new_user.is_active = True
+            #     new_user.save()
+            #     candidate = Candidate.objects.create(user=new_user)
+            #     candidate.save()
+            #     auth.login(request, new_user)
+            #     send_register_email(username, "register")
+            #     return render(request, 'talent_confirm_mail.html', {'email':username})
+            #
+            #
+            # else:
+            #     return render(request, 'register.html',
+            #               {'candidate_register_form': candidate_register_form,
+            #                'hr_register_form': hr_register_form})
         else:
-            candidate_register_form = CandidateRegisterForm()
-            hr_register_form = HrRegisterForm(request.POST)
-            if hr_register_form.is_valid():
-                username = request.POST.get('email', '')
-                com_name = request.POST.get('company_name', '')
-                nick_name = request.POST.get('username', '')
-                phone = request.POST.get('photo', '')
-                if User.objects.filter(username=username):
-                    return render(request, 'register.html',
-                                  {'candidate_register_form': candidate_register_form,
-                                   'hr_register_form': hr_register_form,
-                                   'msg': '该邮箱已注册'})
-                password = request.POST.get('password', '')
-                new_user = User.objects.create(username=username)
+            name = request.POST.get('username')
+            password = request.POST.get('password')
+            email = request.POST.get('mailaddress')
+            company_name = request.POST.get('companyname')
+            job = request.POST.get('job')
+            phone = request.POST.get('phone')
+            if User.objects.filter(username=email):
+                ret = {'msg': 1}
+                return HttpResponse(json.dumps(ret))
+            else:
+                new_user = User.objects.create(username=email)
                 new_user.password = make_password(password)
+                new_user.is_active = True
                 new_user.save()
-                hr = HR(user=new_user, nick_name=nick_name, company_name=com_name, phone=phone)
+                company = Company.objects.create(name=company_name)
+                hr = HR(user=new_user, name=name, company=company, phone=phone, position=job)
                 hr.save()
-                send_register_email(username, 'register')
-                return render(request, 'talent_confirm_mail.html', context={'email': username})
-            return render(request, 'register.html',
-                          {'candidate_register_form': candidate_register_form,
-                           'hr_register_form': hr_register_form})
+                auth.login(request, new_user)
+                #send_register_email(email, 'register')
+                ret = {'msg': 0, 'email': email}
+                return HttpResponse(json.dumps(ret))
+            # candidate_register_form = CandidateRegisterForm()
+            # hr_register_form = HrRegisterForm(request.POST)
+            # if hr_register_form.is_valid():
+            #     username = request.POST.get('email', '')
+            #     com_name = request.POST.get('company_name', '')
+            #     nick_name = request.POST.get('username', '')
+            #     phone = request.POST.get('photo', '')
+            #     if User.objects.filter(username=username):
+            #         return render(request, 'register.html',
+            #                       {'candidate_register_form': candidate_register_form,
+            #                        'hr_register_form': hr_register_form,
+            #                        'msg': '该邮箱已注册'})
+            #     password = request.POST.get('password', '')
+            #     new_user = User.objects.create(username=username)
+            #     new_user.password = make_password(password)
+            #     new_user.save()
+            #     hr = HR(user=new_user, nick_name=nick_name, company_name=com_name, phone=phone)
+            #     hr.save()
+            #     send_register_email(username, 'register')
+            #     return render(request, 'talent_confirm_mail.html', context={'email': username})
+            # return render(request, 'register.html',
+            #               {'candidate_register_form': candidate_register_form,
+            #                'hr_register_form': hr_register_form})
 
 
 class LoginView(View):
     def get(self, request):
-        login_form = LoginForm(request.POST)
-        if request.user.is_authenticated():
+        #login_form = LoginForm(request.POST)
+        if request.user.is_authenticated:
             return render(request, '')
-        return render(request, 'signin.html')
+        return render(request, 'user/login.html')
 
     def post(self, request):
         login_form = LoginForm(request.POST)

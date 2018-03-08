@@ -16,14 +16,15 @@ class Candidate(models.Model):
     city = models.CharField(max_length=20, verbose_name='城市')
     education = models.CharField(max_length=10, choices=(('bachelor', '本科'), ('master', '硕士'), ('doctor', '博士')), default='bachelor')
     image = models.ImageField(upload_to="image/%Y/%m", default="image/default.png", max_length=100)
-    resume = models.OneToOneField(Resume, on_delete=models.PROTECT)
+    resume = models.OneToOneField(Resume, on_delete=models.PROTECT, null=True,blank=True)
 
 
 class HR(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
     name = models.CharField(max_length=20, verbose_name='姓名')
     phone = models.CharField(max_length=15, verbose_name='电话')
-    company = models.ForeignKey(Company, on_delete=models.PROTECT)
+    company = models.ForeignKey(Company, on_delete=models.PROTECT, null=True,blank=True),
+    position = models.CharField(max_length=20, default='',verbose_name='职位')
 
 
 class EmailVerifyRecord(models.Model):

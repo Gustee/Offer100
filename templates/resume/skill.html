@@ -1,0 +1,339 @@
+{% extends 'basic/tpl_logged.html' %}
+{% block body %}
+		<div class="main ui container ">
+			  <div class="ui grid">
+			  <div class="four wide column">
+			    <div class="ui vertical fluid tabular menu">
+			      <a href="../basic" class="item">个人信息 </a>
+			      <a href="../skill" class="item active">技能 </a>
+			      <a href="../career" class="item">职业期望 </a>
+			      <a href="../experience" class="item">工作于教育经历 </a>
+			      <a href="../self_intro" class="item">个人描述</a>
+			      <a href="../social_media" class="item">社交网络 </a>
+			    </div>
+			  </div>
+			  <div class="twelve wide stretched column">
+			    <div class="ui segment">
+				<div class="header-bar">技能</div>
+				<div class="ui divider"></div>
+
+				<form class="ui form">
+					<div class="required field">
+						<label>职业方向</label>
+						<select class="ui fluid dropdown" name="path" id="path" onchange="f1()">
+							<!-- <option value=""></option> -->
+							<option value="1">技术</option>
+							<option value="2">数据</option>
+							<option value="3">产品</option>
+							<option value="4">设计</option>
+							<option value="5">市场销售</option>
+							<option value="6">职能</option>
+							<option value="7">运营</option>
+						</select>
+					</div>
+					<div class="required field">
+						<label>你在该职业方向上有多长时间的工作经验？</label>
+						<select class="ui fluid dropdown" name="exp">
+							<option value=""></option>
+							<option value="1">1年以内</option>
+							<option value="2">2年</option>
+							<option value="3">3年</option>
+							<option value="4">4年</option>
+							<option value="5">5年</option>
+							<option value="6">6年</option>
+							<option value="7">7年</option>
+							<option value="8">8年</option>
+							<option value="9">9年</option>
+							<option value="6">10年</option>
+							<option value="7">10年以上</option>
+						</select>
+					</div>
+					<div class="field">
+						<label>选择你期望从事的职位</label>
+						<div id="checkboxs technology">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name=".Net工程师">
+									<label>.Net工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="安全工程师">
+									<label>安全工程师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="Android工程师">
+									<label>Android工程师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="C/C++工程师">
+									<label>C/C++工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="测试工程师">
+									<label>测试工程师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="CTO">
+									<label>CTO</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="DBA">
+									<label>DBA</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="Go工程师">
+									<label>Go工程师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="iOS工程师">
+									<label>iOS工程师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="JAVA工程师">
+									<label>JAVA工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="技术经理">
+									<label>技术经理</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="架构师">
+									<label>架构师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="Node.js工程师">
+									<label>Node.js工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="PHP工程师">
+									<label>PHP工程师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="Python工程师">
+									<label>Python工程师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="前端工程师">
+									<label>前端工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="全栈工程师">
+									<label>全栈工程师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="Ruby工程师">
+									<label>Ruby工程师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="Scala工程师">
+									<label>Scala工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="算法工程师">
+									<label>算法工程师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="图形图像处理">
+									<label>图形图像处理</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="游戏服务端工程师">
+									<label>游戏服务端工程师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="游戏开发">
+									<label>游戏开发</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="游戏客户端工程师">
+									<label>游戏客户端工程师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="运维">
+									<label>运维</label>
+								</div>
+							</div>
+						</div>	
+						<div id="checkboxs data" style="position: absolute; display: none;">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="BI研发">
+									<label>BI研发</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="数据分析师">
+									<label>数据分析师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="数据工程师">
+									<label>数据工程师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="数据架构师">
+									<label>数据架构师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="数据专家">
+									<label>数据专家</label>
+								</div>
+							</div>
+						</div>
+						<div id="checkboxs product" style="position: absolute; display: none;">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="产品经理">
+									<label>产品经理</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="产品助理">
+									<label>产品助理</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="产品总监">
+									<label>产品总监</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="游戏策划">
+									<label>游戏策划</label>
+								</div>
+							</div>
+						</div>
+						<div id="checkboxs design" style="position: absolute; display: none;">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="品牌/平面设计师">
+									<label>品牌/平面设计师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="视觉设计师">
+									<label>视觉设计师</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="UE设计师">
+									<label>UE设计师</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="UI设计师">
+									<label>UI设计师</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="用户研究员">
+									<label>用户研究员</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="游戏设计">
+									<label>游戏设计</label>
+								</div>
+							</div>
+						</div>
+						<div id="checkboxs marketsell" style="position: absolute; display: none;">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="公关">
+									<label>公关</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="商务">
+									<label>商务</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="市场">
+									<label>市场</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="销售">
+									<label>销售</label>
+								</div>
+							</div>
+						</div>
+						<div id="checkboxs function" style="position: absolute; display: none;">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="财务">
+									<label>财务</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="法务">
+									<label>法务</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="人力资源">
+									<label>人力资源</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="行政">
+									<label>行政</label>
+								</div>
+							</div>
+						</div>
+						<div id="checkboxs run" style="position: absolute; display: none;">
+							<div class="row">
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="编辑/文案">
+									<label>编辑/文案</label>
+								</div>
+								<div class="ui checkbox" style="width: 250px;">
+									<input type="checkbox" name="产品运营">
+									<label>产品运营</label>
+								</div>
+								<div class="ui checkbox">
+									<input type="checkbox" name="新媒体运营">
+									<label>新媒体运营</label>
+								</div>
+							</div>
+							<div style="height: 15px;"></div>
+						</div>
+					</div>
+					<div class="required field">
+						<label>职业技能</label>
+						<div class="ui input">
+						<input type="text" name="技能" placeholder="请输入您擅长的职业技能">
+						</div>
+					</div>
+				<div class="save"><button class="ui primary button" type="submit">保存</button></div>
+				</form>
+				
+			    </div>
+			   </div>
+			  </div>
+			</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+body {
+	width: 100%;
+	min-width: 1300px;
+	margin: 0;
+	background-color: #ededef;
+	font-family: "Open Sans", sans-serif;
+}
+.header {
+	width: 100%;
+	height: 48px;
+	margin: 0px;
+	background-color: white;
+}
+li.top {
+	display: inline;
+	margin: 20px;
+}
+ul.top{
+	width:50%;
+	float: left;
+	text-align: : center;
+/*	background: red;*/
+	padding-left: 250px;
+}
+.icon1 {
+	width: 25%;
+	/*position: absolute;*/
+	float: left;
+	text-align: right;
+}
+.icon2 {
+	width: 12.5%;
+	/*position: absolute;*/
+	float: left;
+	text-align: center;
+	margin-top:5px;
+}
+.icon3 {
+	width: 12.5%;
+	/*position: absolute;*/
+	float: left;
+	margin-top:10px; 
+
+}
+a.ref.top:hover{
+	color: #2f3239;
+}
+a.ref.top{
+	color: gray;
+	text-decoration: none;
+}
+.container {
+	margin: 15px auto;
+}
+.complete {
+	margin-top:10px;
+	border-bottom: 1px solid;
+}
+.header-bar {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 20px;
+}
+.ui.small.image {
+	margin: 30px;
+}
+.btn-container {
+	position: relative;
+}
+#change {
+	position: absolute;
+	top:100px;
+	left: 200px;
+}
+.save {
+	text-align: center;
+}
+.ui.form {
+	margin: 40px;
+}
+#wage_y_m {
+	width: 100px;
+}
+#wage {
+	width: 100px;
+}

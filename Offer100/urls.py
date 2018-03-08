@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users.views import *
+from resume.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,7 +24,15 @@ urlpatterns = [
     path('active/<str:code>', ActiveUserView.as_view(), name='active'),
     path('home/', home_view, name='home'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('signin/', LoginView.as_view, name='signin'),
+    path('login/', LoginView.as_view(), name='signin'),
     path('profiles/', include('users.urls')),
     path('account/', AccountView.as_view()),
+    path('resume/basic/', BasicView.as_view()),
+    path('resume/career/', CareerView.as_view()),
+    path('resume/experience/', ExperienceView.as_view()),
+    path('resume/info/', InfoView.as_view()),
+    path('resume/self_intro/', SelfIntroView.as_view()),
+    path('resume/showcase/', ShowCaseView.as_view()),
+    path('resume/skill/', SkillView.as_view()),
+    path('resume/social_media/', SocialMediaView.as_view()),
 ]
