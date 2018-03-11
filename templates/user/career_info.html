@@ -2,5 +2,77 @@
 {% block body %}
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
-    
+    <script src="{% static 'js/user.js' %}"></script>
+    <div class="info-body">
+    <div class="info-container">
+        <form class="info-container-in">
+            <div class="info-title">
+                完善职业信息
+            </div>
+{#            <div class="info-name">#}
+{#                <label class="info-label" for="info_name">姓名</label>#}
+{#                <input class="info-input info-i-name" id="info_name" name="info[name]" placeholder="请输入中文姓名" type="text">#}
+{#            </div>#}
+
+            <div class="info-direction">
+                <label class="info-label" for="info_direction">职业方向</label>
+                <div class="ui selection dropdown">
+                  <input type="hidden" name="info_direction">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">技术</div>
+                  <div class="menu">
+                    <div class="item" data-value="0">技术</div>
+                    <div class="item" data-value="1">数据</div>
+                      <div class="item" data-value="2">产品</div>
+                    <div class="item" data-value="3">设计</div>
+                      <div class="item" data-value="4">市场与销售</div>
+                    <div class="item" data-value="5">职能</div>
+                      <div class="item" data-value="6">运营</div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="info-workedtime">
+                <label class="info-label" for="info_workedtime">你在该职业方向上有多长时间的工作经验？</label>
+                <div class="ui selection dropdown">
+                  <input type="hidden" name="info_workedtime">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">请选择</div>
+                  <div class="menu">
+                    <div class="item" data-value="0">1年以内</div>
+                    <div class="item" data-value="1">1年</div>
+                      <div class="item" data-value="2">2年</div>
+                    <div class="item" data-value="3">3年</div>
+                      <div class="item" data-value="4">4年</div>
+                    <div class="item" data-value="5">5年</div>
+                      <div class="item" data-value="6">6年</div>
+                       <div class="item" data-value="7">7年</div>
+                    <div class="item" data-value="8">8年</div>
+                      <div class="item" data-value="9">9年</div>
+                    <div class="item" data-value="10">10年</div>
+                      <div class="item" data-value="11">10年以上</div>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="info-age">
+                <label class="info-label" for="info_job">你期望从事的职位</label>
+                <input class="info-input info-i-age" id="info_job" name="info[job]" placeholder="" type="text">
+            </div>
+            <div class="info-degree">
+                <label class="info-label" for="info_workplace">你期望在哪里工作</label>
+                <input class="info-input info-i-degree" id="info_workplace" name="info[workplace]" placeholder="" type="text">
+            </div>
+            <div class="info-country">
+                <label class="info-label" for="info_salary">您目前的税收收入是?(年)</label>
+                <input class="info-input info-i-country" id="info_salary" name="info[salary]" placeholder="" type="text">
+            </div>
+            <div class="info-next-box">
+                <button class="ui primary button info-next" type="submit">下一步</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
 {% endblock %}

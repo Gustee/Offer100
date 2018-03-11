@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
     <div class="info-body">
     <div class="info-container">
-        <div class="info-container-in">
+        <form class="info-container-in">
             <div class="info-title">
                 完善基本信息
             </div>
@@ -43,9 +43,9 @@
                 <input class="info-input info-i-phone" id="info_phone" name="info[phone]" placeholder="请输入手机号" type="text">
             </div>
             <div class="info-next-box">
-                <button class="ui primary button info-next">下一步</button>
+                <button class="ui primary button info-next" type="submit">下一步</button>
             </div>
-        </div>
+        </form>
     </div>
     </div>
 {% endblock %}

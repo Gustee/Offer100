@@ -25,4 +25,20 @@
 .info-avatar{display:inline-block;position:absolute;width:290px;height:90px;}
 .info-avatar-text{margin-top:30px;padding-left:120px;display:inline-block;}
 .info-avatar-img{width:90px;height:90px;border-radius: 100px;float:right;background-color: #2bbbff;}
-
+/*career_info*/
+.info-name{display: inline-block;width:270px;}
+.info-direction{margin-bottom: 1em;}
+.info-workedtime{margin-bottom: 1em;}
+/*setting*/
+.header-bar {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 20px;
+}
+.container {
+	margin: 15px auto;
+}
+textarea{
+    width:100%;
+    height:10em;
+}

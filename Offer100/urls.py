@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from users.views import *
 from resume.views import *
+from job.views import *
+from company.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,14 +27,19 @@ urlpatterns = [
     path('home/', home_view, name='home'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('login/', LoginView.as_view(), name='signin'),
-    path('profiles/', include('users.urls')),
+    path('user/', include('users.urls')),
     path('account/', AccountView.as_view()),
     path('resume/basic/', BasicView.as_view()),
     path('resume/career/', CareerView.as_view()),
     path('resume/experience/', ExperienceView.as_view()),
-    path('resume/info/', InfoView.as_view()),
     path('resume/self_intro/', SelfIntroView.as_view()),
     path('resume/showcase/', ShowCaseView.as_view()),
     path('resume/skill/', SkillView.as_view()),
     path('resume/social_media/', SocialMediaView.as_view()),
+    path('job/', JobsView.as_view()),
+    path('job/<str:id>', DetailView.as_view()),
+    path('company/info', InfoView.as_view()),
+    path('company/applicant', ApplicantView.as_view()),
+    path('company/new', NewView.as_view()),
+    path('company/position', PositionView.as_view())
 ]

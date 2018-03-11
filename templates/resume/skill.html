@@ -17,7 +17,8 @@
 				<div class="header-bar">技能</div>
 				<div class="ui divider"></div>
 
-				<form class="ui form">
+				<form class="ui form" method="post" action="/resume/skill/">
+                    {% csrf_token %}
 					<div class="required field">
 						<label>职业方向</label>
 						<select class="ui fluid dropdown" name="path" id="path" onchange="f1()">
@@ -44,8 +45,8 @@
 							<option value="7">7年</option>
 							<option value="8">8年</option>
 							<option value="9">9年</option>
-							<option value="6">10年</option>
-							<option value="7">10年以上</option>
+							<option value="10">10年</option>
+							<option value="0">10年以上</option>
 						</select>
 					</div>
 					<div class="field">
@@ -53,127 +54,127 @@
 						<div id="checkboxs technology">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name=".Net工程师">
+									<input type="checkbox" name="skill-type" value=".Net工程师">
 									<label>.Net工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="安全工程师">
+									<input type="checkbox" name="skill-type" value="安全工程师">
 									<label>安全工程师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="Android工程师">
+									<input type="checkbox" name="skill-type" value="Android工程师">
 									<label>Android工程师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="C/C++工程师">
+									<input type="checkbox" name="skill-type" value="C/C++工程师">
 									<label>C/C++工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="测试工程师">
+									<input type="checkbox" name="skill-type" value="测试工程师">
 									<label>测试工程师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="CTO">
+									<input type="checkbox" name="skill-type" value="CTO">
 									<label>CTO</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="DBA">
+									<input type="checkbox" name="skill-type" value="DBA">
 									<label>DBA</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="Go工程师">
+									<input type="checkbox" name="skill-type" value="Go工程师">
 									<label>Go工程师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="iOS工程师">
+									<input type="checkbox" name="skill-type" value="iOS工程师">
 									<label>iOS工程师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="JAVA工程师">
+									<input type="checkbox" name="skill-type" value="JAVA工程师">
 									<label>JAVA工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="技术经理">
+									<input type="checkbox" name="skill-type" value="技术经理">
 									<label>技术经理</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="架构师">
+									<input type="checkbox" name="skill-type" value="架构师">
 									<label>架构师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="Node.js工程师">
+									<input type="checkbox" name="skill-type" value="Node.js工程师">
 									<label>Node.js工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="PHP工程师">
+									<input type="checkbox" name="skill-type" value="PHP工程师">
 									<label>PHP工程师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="Python工程师">
+									<input type="checkbox" name="skill-type" value="Python工程师">
 									<label>Python工程师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="前端工程师">
+									<input type="checkbox" name="skill-type" value="前端工程师">
 									<label>前端工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="全栈工程师">
+									<input type="checkbox" name="skill-type" value="全栈工程师">
 									<label>全栈工程师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="Ruby工程师">
+									<input type="checkbox" name="skill-type" value="Ruby工程师">
 									<label>Ruby工程师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="Scala工程师">
+									<input type="checkbox" name="skill-type" value="Scala工程师">
 									<label>Scala工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="算法工程师">
+									<input type="checkbox" name="skill-type" value="算法工程师">
 									<label>算法工程师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="图形图像处理">
+									<input type="checkbox" name="skill-type" value="图形图像处理">
 									<label>图形图像处理</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="游戏服务端工程师">
+									<input type="checkbox" name="skill-type" value="游戏服务端工程师">
 									<label>游戏服务端工程师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="游戏开发">
+									<input type="checkbox" name="skill-type" value="游戏开发">
 									<label>游戏开发</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="游戏客户端工程师">
+									<input type="checkbox" name="skill-type" value="游戏客户端工程师">
 									<label>游戏客户端工程师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="运维">
+									<input type="checkbox" name="skill-type" value="运维">
 									<label>运维</label>
 								</div>
 							</div>
@@ -181,26 +182,26 @@
 						<div id="checkboxs data" style="position: absolute; display: none;">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="BI研发">
+									<input type="checkbox" name="skill-type" value="BI研发">
 									<label>BI研发</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="数据分析师">
+									<input type="checkbox" name="skill-type" value="数据分析师">
 									<label>数据分析师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="数据工程师">
+									<input type="checkbox" name="skill-type" value="数据工程师">
 									<label>数据工程师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="数据架构师">
+									<input type="checkbox" name="skill-type" value="数据架构师">
 									<label>数据架构师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="数据专家">
+									<input type="checkbox" name="skill-type" value="数据专家">
 									<label>数据专家</label>
 								</div>
 							</div>
@@ -208,22 +209,22 @@
 						<div id="checkboxs product" style="position: absolute; display: none;">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="产品经理">
+									<input type="checkbox" name="skill-type" value="产品经理">
 									<label>产品经理</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="产品助理">
+									<input type="checkbox" name="skill-type" value="产品助理">
 									<label>产品助理</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="产品总监">
+									<input type="checkbox" name="skill-type" value="产品总监">
 									<label>产品总监</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="游戏策划">
+									<input type="checkbox" name="skill-type" value="游戏策划">
 									<label>游戏策划</label>
 								</div>
 							</div>
@@ -231,30 +232,30 @@
 						<div id="checkboxs design" style="position: absolute; display: none;">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="品牌/平面设计师">
+									<input type="checkbox" name="skill-type" value="品牌/平面设计师">
 									<label>品牌/平面设计师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="视觉设计师">
+									<input type="checkbox" name="skill-type" value="视觉设计师">
 									<label>视觉设计师</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="UE设计师">
+									<input type="checkbox" name="skill-type" value="UE设计师">
 									<label>UE设计师</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="UI设计师">
+									<input type="checkbox" name="skill-type" value="UI设计师">
 									<label>UI设计师</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="用户研究员">
+									<input type="checkbox" name="skill-type" value="用户研究员">
 									<label>用户研究员</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="游戏设计">
+									<input type="checkbox" name="skill-type" value="游戏设计">
 									<label>游戏设计</label>
 								</div>
 							</div>
@@ -262,22 +263,22 @@
 						<div id="checkboxs marketsell" style="position: absolute; display: none;">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="公关">
+									<input type="checkbox" name="skill-type" value="公关">
 									<label>公关</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="商务">
+									<input type="checkbox" name="skill-type" value="商务">
 									<label>商务</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="市场">
+									<input type="checkbox" name="skill-type" value="市场">
 									<label>市场</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="销售">
+									<input type="checkbox" name="skill-type" value="销售">
 									<label>销售</label>
 								</div>
 							</div>
@@ -285,22 +286,22 @@
 						<div id="checkboxs function" style="position: absolute; display: none;">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="财务">
+									<input type="checkbox" name="skill-type" value="财务">
 									<label>财务</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="法务">
+									<input type="checkbox" name="skill-type" value="法务">
 									<label>法务</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="人力资源">
+									<input type="checkbox" name="skill-type" value="人力资源">
 									<label>人力资源</label>
 								</div>
 							</div>
 							<div style="height: 15px;"></div>
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="行政">
+									<input type="checkbox" name="skill-type" value="行政">
 									<label>行政</label>
 								</div>
 							</div>
@@ -308,15 +309,15 @@
 						<div id="checkboxs run" style="position: absolute; display: none;">
 							<div class="row">
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="编辑/文案">
+									<input type="checkbox" name="skill-type" value="编辑/文案">
 									<label>编辑/文案</label>
 								</div>
 								<div class="ui checkbox" style="width: 250px;">
-									<input type="checkbox" name="产品运营">
+									<input type="checkbox" name="skill-type" value="产品运营">
 									<label>产品运营</label>
 								</div>
 								<div class="ui checkbox">
-									<input type="checkbox" name="新媒体运营">
+									<input type="checkbox" name="skill-type" value="新媒体运营">
 									<label>新媒体运营</label>
 								</div>
 							</div>
@@ -326,7 +327,7 @@
 					<div class="required field">
 						<label>职业技能</label>
 						<div class="ui input">
-						<input type="text" name="技能" placeholder="请输入您擅长的职业技能">
+						<input type="text" name="skill" placeholder="请输入您擅长的职业技能">
 						</div>
 					</div>
 				<div class="save"><button class="ui primary button" type="submit">保存</button></div>

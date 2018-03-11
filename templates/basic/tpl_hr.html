@@ -4,43 +4,24 @@
     {% load staticfiles %}
     <meta charset="UTF-8">
     <title>100offer</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/basic/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/basic/main.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/basic/test.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'semantic/dist/semantic.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'semantic/dist/semantic.min.js'%}">
-    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/company.css' %}">
 
 </head>
 <body>
-<div class="head">
-    <div class="head-pic">
-        <div class="head-first">
-            <img src="{% static 'img/logo.png' %}">
-            <div class="daohang">
-                <ul>
-                    <li><a href="https://konohax.github.io/100offer/company.html">我要招人</a></li>
-                    <li><a href="#">使用攻略</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">推荐</a></li>
-                    <li><a href="#" class="getA">登录</a></li>
-                    <li><a href="#" class="getB">注册</a></li>
-                </ul>
-            </div>
-            <div class="banner-text">
-                <div class="content">
-                    <h1 class="title">1次申请，10个优质offer，1份更好的工作</h1>
-                    <h3 class="subtitle">2年＋工作经验，20w－80w年薪，互联网技术、设计、产品</h3>
-                    <div class="apply banner-btn">
-                        <a href="#">
-                            <div>现在申请</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+<div class="header">
+    <a href="index.html" class="icon1"><img src="{% static 'img/icon1.png'%}"></a>
+    <ul class="ul top" style="padding-left: 300px;">
+        <li class="li top"><a href="/company/position" class="ref top">职位管理</a></li>
+        <li class="li top"><a href="/company/applicant" class="ref top">候选人管理</a></li>
+    </ul>
+    <a href="#" class="icon2"><img src="{% static 'img/icon2.png'%}"></a>
+	<a href="#" class="icon3"><img src="{% static 'img/icon3.png'%}"></a>
 </div>
+
 {% block body %}{% endblock %}
 <div class="footer">
     <div class="main-container">
@@ -106,7 +87,12 @@
         <div class="copyright">沪ICP备14017096号-3 © 2016 上海奇点人才服务有限公司</div>
     </div>
 </div>
-<script src="jquery-1.7.2.js"></script>
+
+<script src="http://www.semantic-ui.cn/javascript/library/jquery.min.js"></script>
+<script src="http://www.semantic-ui.cn/dist/semantic.min.js"></script>
+<script src="http://www.semantic-ui.cn/javascript/docs.js"></script>
+<script src=" http://www.semantic-ui.cn/javascript/menu.js"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/company.js' %}"></script>
 </body>
 </html>

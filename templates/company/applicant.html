@@ -1,0 +1,26 @@
+{% extends 'basic/tpl_hr.html' %}
+{% block body %}
+    {% load staticfiles %}
+
+    <div class="main ui container" style="width: 60%;">
+        <div class="ui top attached tabular menu">
+        <a class="item active">新投递</a>
+        <a class="item">待候选人回应</a>
+        <a class="item">待面试安排</a>
+        <a class="item">面试中</a>
+        <a class="item">面试通过</a>
+        <a class="item">归档</a>
+        <div class="right menu">
+          <div class="item">
+            <div class="ui transparent icon input">
+              <input type="text" placeholder="搜索职位、姓名等……">
+              <i class="search link icon"></i>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="ui bottom attached segment">
+            <div style="height: 700px;"></div>
+        </div>
+    </div>
+{% endblock %}

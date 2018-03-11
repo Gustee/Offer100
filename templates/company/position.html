@@ -1,0 +1,25 @@
+{% extends 'basic/tpl_hr.html' %}
+{% block body %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/company.css' %}">
+
+			<div class="main ui container" style="width: 60%;">
+				<div class="ui top attached tabular menu">
+				    <a class="item active">招聘中</a>
+				    <a class="item">全部职位</a>
+				    <a class="item">已结束</a>
+				    <div class="right menu">
+				      <div class="item">
+				        <!-- <div class="ui transparent icon input">
+				          <input type="text" placeholder="搜索职位、姓名等……">
+				          <i class="search link icon"></i>
+				        </div> -->
+				        <a href="/company/new"><button class="ui primary button">新建职位</button></a>
+				      </div>	
+				    </div>
+				    </div>
+				    <div class="ui bottom attached segment">
+				    	<div style="height: 700px;"></div>
+				    </div>
+			</div>
+{% endblock %}

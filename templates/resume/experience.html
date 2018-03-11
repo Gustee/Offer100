@@ -9,7 +9,7 @@
 			      <a href="../basic" class="item">个人信息 </a>
 			      <a href="../skill" class="item">技能 </a>
 			      <a href="../career" class="item">职业期望 </a>
-			      <a href="../experience" class="item active">工作于教育经历 </a>
+			      <a href="../experience" class="item active">工作与教育经历 </a>
 			      <a href="../self_intro" class="item">个人描述</a>
 			      <a href="../social_media" class="item">社交网络 </a>
 			    </div>
@@ -18,14 +18,14 @@
 		   		<div class="ui segment">
 			   		<div class="header-bar">工作与教育经历</div>
 					<div class="ui divider"></div>
-					<form class="ui form">
+					<form class="ui form" method="post" action="/resume/experience/">
 						<div class="field">
 							<label>工作经历</label>	
-							<textarea rows="8" cols="50" placeholder="简要描述你的工作经历"></textarea>
+							<textarea rows="8" name="job-experiences" cols="50" placeholder="简要描述你的工作经历"></textarea>
 						</div>
 						<div class="field">
 							<label>教育经历</label>	
-							<textarea rows="8" cols="50" placeholder="简要描述你的教育经历"></textarea>
+							<textarea rows="8" name="edu-experiences" cols="50" placeholder="简要描述你的教育经历"></textarea>
 						</div>
 						<div class="save"><button class="ui primary button" type="submit">保存</button></div>
 					</form>

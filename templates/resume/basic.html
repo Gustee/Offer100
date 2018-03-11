@@ -19,7 +19,8 @@
 					<div class="header-bar">个人信息</div>
 					<div class="ui divider"></div>
 
-					<form class="ui form">
+					<form class="ui form" method="post" action="/resume/basic/">
+                        {% csrf_token %}
 {#					<div class="btn-container">#}
 {#                        <input class="ui small image" style="background-image: url({% static "img/icon4.png" %})" type="file">#}
 {##}

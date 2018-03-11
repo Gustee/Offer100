@@ -2,5 +2,27 @@
 {% block body %}
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
-    
+    <div class="info-body">
+    <div class="info-container">
+        <form class="info-container-in">
+            <div class="info-title">
+                工作和教育经历
+            </div>
+            <div class="info-age">
+                <label class="info-label" for="info_job_ex">工作经历</label>
+                <textarea class="info-input" id="info_job_ex" name="info[job_ex]" placeholder="" type="text"></textarea>
+            </div>
+            <div class="info-degree">
+                <label class="info-label" for="info_project_ex">项目经历</label>
+                <textarea class="info-input" id="info_project_ex" name="info[project_ex]" placeholder="" type="text"></textarea>
+            </div>
+            <div class="info-country">
+                <label class="info-label" for="info_education_ex">教育经历</label>
+                <textarea class="info-input" id="info_education_ex" name="info[education_ex]" placeholder="" type="text"></textarea>
+            </div>
+            <div class="info-next-box">
+                <button class="ui primary button info-next" type="submit">完成</button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

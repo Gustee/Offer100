@@ -1,9 +1,19 @@
 //login
 //登录按钮
+$(document).ready(function() {
+    $('.ui.dropdown')
+    .dropdown()
+    ;
+});
+
+
+
+
+
     $("#signin-button").click(function () {
         var username = $("#username").val();
         var password = $("#password").val();
-        if (username.length < 5 || password.length < 6) {
+        if (username.length < 2 || password.length < 6) {
             console.log("账号或密码格式不对");
             $(".error-red-text").text("账号或密码格式不对").show();
         } else {

@@ -17,23 +17,23 @@
 		   		<div class="ui segment">
 			   <div class="header-bar">社交网络</div>
 				<div class="ui divider"></div>
-				<form class="ui form">
+				<form class="ui form" method="post" action="/resume/social_media/">
 					<div class="field">
 						<div class="ui input">
 							<img src="{% static 'img/resume/gh.png'%}">
-						  	<input type="text" placeholder="Github">
+						  	<input type="text" name="github" placeholder="Github">
 						</div>
 						<div class="ui input">
 							<img src="{% static 'img/resume/blog.png'%}">
-						  	<input type="text" placeholder="博客">
+						  	<input type="text" name="blog" placeholder="博客">
 						</div>
 						<div class="ui input">
 							<img src="{% static 'img/resume/www.png'%}">
-						  	<input type="text" placeholder="个人网站">
+						  	<input type="text" name="personal-page" placeholder="个人网站">
 						</div>
 						<div class="ui input">
 							<img src="{% static 'img/resume/zhihu.png'%}">
-						  	<input type="text" placeholder="知乎">
+						  	<input type="text" name="zhihu" placeholder="知乎">
 						</div>
 					</div>
 					<div class="save"><button class="ui primary button" type="submit">保存</button></div>

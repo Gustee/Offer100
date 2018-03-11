@@ -1,0 +1,174 @@
+{% extends 'basic/tpl_hr.html' %}
+{% block body %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/company.css' %}">
+
+		<div class="main ui container" style=" padding-top:5px;background: white;width: 60%;">
+			<div class="header-bar">新建职位</div>
+			<div class="ui divider"></div>
+			<form class="ui form" >
+				<div class="required field" style="width: 50%;">
+					<label>职位类型</label>
+					<div class="ui fluid search selection dropdown" >
+				        <input type="hidden" name="position_type">
+				        <i class="dropdown icon"></i>
+				        <div class="default text">选择类型</div>
+				        <div class="menu">
+						    <div class="item" data-value=""></div>
+						    <div class="item" data-value="tec">技术</div>
+						    <div class="item" data-value="pr">产品</div>
+						    <div class="item" data-value="ds">设计</div>
+						    <div class="item" data-value="da">数据</div>
+						    <div class="item" data-value="op">运营</div>
+						    <div class="item" data-value="mk">市场与销售</div>
+						    <div class="item" data-value="fu">职能</div>
+						</div>
+					</div>
+				</div>
+				<div class="required field" style="width: 50%">
+					<label>职位名称</label>
+					<input type="text" name="email" placeholder="请输入职位名称，如：JAVA工程师">
+				</div>
+				<div class="required field" style="width: 80%">
+					<label>工作地点</label>
+					<div class="ui fluid search selection dropdown" style="width: 20%; float: left;">
+				        <input type="hidden" name="addr">
+				        <i class="dropdown icon"></i>
+				        <div class="default text">选择类型</div>
+				        <div class="menu">
+						    <div class="item" data-value=""></div>
+						    <div class="item" data-value="bj">北京</div>
+						    <div class="item" data-value="sh">上海</div>
+						    <div class="item" data-value="gz">广州</div>
+						    <div class="item" data-value="sz">深圳</div>
+						    <div class="item" data-value="hz">杭州</div>
+						    <div class="item" data-value="cd">成都</div>
+						    <div class="item" data-value="sz">苏州</div>
+						    <div class="item" data-value="nj">南京</div>
+						    <div class="item" data-value="wh">武汉</div>
+						</div>
+					</div>
+					<div class="ui input" style="width: 80%; float: left;">
+						<input type="text" placeholder="详细工作地址" name="">
+					</div>
+				</div>
+				<div style="height: 40px;"></div>
+				<div class="required field" style="width: 50%;">
+					<label>薪资范围</label>
+					<div style="float: left; ">
+						<select class="ui fluid dropdown" id="wage_y_m">
+							<option value="1">月薪</option>
+			    			<option value="2">年薪</option>
+						</select>
+					</div>
+					<div style="float: left;">
+						<div class="ui input left icon" id="wage">
+							<i class="yen icon"></i>
+							<input type="text" name="wage">
+						</div>
+					</div>
+					<div style="float: left; margin-top:10px; margin-left: 5px;"><label>~</label></div>
+					<div style="float: left; margin-left: 10px;" >
+						<div class="ui input left icon" id="wage">
+							<i class="yen icon"></i>
+							<input type="text" name="wage">
+						</div>
+					</div>
+					<div style="float: left; margin-top:10px; margin-left: 10px;"><label>W</label></div>
+				</div>
+				<div style="height: 40px;"></div>
+				<div class="required field" style="width: 50%">
+					<label>工作经验要求</label>
+					<div class="ui input" style="width: 20%; float: left;">
+						<input type="text" placeholder="" name="">
+					</div>
+					<div style="float: left; margin-top:10px; margin-left: 10px;"><label>年以上</label></div>
+				</div>
+				<div style="height: 40px;"></div>
+				<div class="required field" style="width: 50%">
+					<label>最低学历要求</label>
+				    <div class="grouped fields">
+	<!-- 				    <label>Outbound Throughput</label> -->
+					    <div class="field">
+					      <div class="ui slider checkbox">
+					        <input type="radio" name="study" checked="checked">
+					        <label>无限制</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox">
+					        <input type="radio" name="study">
+					        <label>专科</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox">
+					        <input type="radio" name="study">
+					        <label>本科</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox checked">
+					        <input type="radio" name="study">
+					        <label>硕士</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox checked">
+					        <input type="radio" name="study">
+					        <label>博士</label>
+					      </div>
+					    </div>
+				    </div>
+				</div>
+				<div style="height: 40px;"></div>
+				<div class="required field" style="width: 50%">
+					<label>教育经历要求</label>
+				    <div class="grouped fields">
+	<!-- 				    <label>Outbound Throughput</label> -->
+					    <div class="field">
+					      <div class="ui slider checkbox">
+					        <input type="radio" name="educ" checked="checked">
+					        <label>无限制</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox">
+					        <input type="radio" name="educ">
+					        <label>一本</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox">
+					        <input type="radio" name="educ">
+					        <label>211</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox checked">
+					        <input type="radio" name="educ">
+					        <label>985</label>
+					      </div>
+					    </div>
+					    <div class="field">
+					      <div class="ui slider checkbox checked">
+					        <input type="radio" name="educ">
+					        <label>清北复交浙</label>
+					      </div>
+					    </div>
+				    </div>
+				</div>
+				<div style="height: 40px;"></div>
+				<div class="field" style="width: 80%">
+					<label>职位介绍</label>
+					<textarea rows="8" cols="50" placeholder="请输入对该职位的介绍" name="self_intro"></textarea>
+					<div style="height: 15px;"></div>
+					<div class="ui toggle checkbox">
+					    <input type="checkbox" name="mag">
+					    <label>管理岗位</label>
+				    </div>
+				</div>
+				<div class="save"><button class="ui primary button" style="margin-bottom:2em;" type="submit">提交</button></div>
+			</form>
+		</div>
+{% endblock %}

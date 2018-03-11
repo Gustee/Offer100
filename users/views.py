@@ -206,27 +206,42 @@ class PersonalInfoView(View):
         return HttpResponseRedirect('/signin')
 
 
+# class AccountView(View):
+#     def get(self, request):
+#         if request.user.is_authenticated():
+#             candidate = Candidate.objects.get(user=request.user)
+#             account_form = AccountForm()
+#             return render(request, 'account.html', {
+#                 'email': request.user.username,
+#                 'form': account_form
+#             })
+#
+#     def post(self, request):
+#         account_form = PersonalInfoForm(request.POST)
+#         if account_form.is_valid():
+#             candidate = Candidate.objects.get(user=request.user)
+#             mobile = request.POST.get('mobile', '')
+
+
+
+
+
+class PersonalInfoView(View):
+    def get(self, request):
+        return render(request, 'user/personal_info.html')
+
+
 class AccountView(View):
     def get(self, request):
-        if request.user.is_authenticated():
-            candidate = Candidate.objects.get(user=request.user)
-            account_form = AccountForm()
-            return render(request, 'account.html', {
-                'email': request.user.username,
-                'form': account_form
-            })
-
-    def post(self, request):
-        account_form = PersonalInfoForm(request.POST)
-        if account_form.is_valid():
-            candidate = Candidate.objects.get(user=request.user)
-            mobile = request.POST.get('mobile', '')
+        return render(request, 'user/account.html')
 
 
+class CareerInfoView(View):
+    def get(self, request):
+        return render(request, 'user/career_info.html')
 
 
-
-# class HomeView(View):
-#     def get(self, request):
-#         return render(request, 'home.html')
+class Experience(View):
+    def get(self, request):
+        return render(request, 'user/experience.html')
 

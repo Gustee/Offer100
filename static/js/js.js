@@ -1,7 +1,36 @@
 $(document).ready(function(){
-		$('.ui.dropdown').dropdown();
-		$('.ui.radio.checkbox').checkbox();
+		$('.ui.dropdown').dropdown();		//下拉菜单
+
+		$('.ui.radio.checkbox').checkbox();   //复选框
 		display_now=document.getElementById("checkboxs technology");
+
+		$('.special.cards .image').dimmer({     //鼠标移入出现按钮---info.html
+          on: 'hover'
+          });
+
+		$(function () {                         //选择图片上传
+            //按钮的点击事件
+            $('#changeImage').click(function () {
+                //触发file的点击事件
+                $('#chooseImage').click();
+            });
+            //file的change事件
+            $('#chooseImage').change(function () {
+            	
+            		    var filePath = $(this).val(),         //获取到input的value，里面是文件的路径  
+	            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),  
+	            src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式  
+	              
+	        // 检查是否是图片  
+	        if( !fileFormat.match(/.png|.jpg|.jpeg/) ) {  
+	            error_prompt_alert('上传错误,文件格式必须为：png/jpg/jpeg');  
+	            return;    
+	        }  	    
+	        $('#img').attr('src',src);  
+            });
+　　　　}); 
+ 
+
 })
 var display_now;
 function f1(){
@@ -64,29 +93,4 @@ function f1(){
 	}
 
 }
-$('#save-1').click(function(){
-	console.log($('#username').val().toString().length)
-	if($('#username').val().toString().length<1||$('#sex').val().toString().length<1||$('#age').val().toString().length<1||$('#country').val().toString().length<1||$('#phoneNum').val().toString().length<1||$('#email').val().toString().length<1){
-		console.log("请输入完整信息");
-        $(".error-red-text").text("请输入完整信息").show();
-	}
-	// $.ajax({
-	// 	url: "/info/",
-	// 	type: "POST",
-	// 	data:{
-	// 		"username":$('#username').val(),
-	// 		"sex":$('#sex').val(),
-	// 		"age":$('#age').val(),
-	// 		"country":$('#country').val(),
-	// 		"phone":$('#phoneNum').val(),
-	// 		"email":$('#email').val(),
-	// 		"csrfmiddlewaretoken": $('[name=csrfmiddlewaretoken]').val()
-     //    },
-     //    success:{
-    //
-	// 	}
-     //    })
-	// })
-});
-
 

@@ -1,0 +1,43 @@
+{% extends 'basic/tpl_0.html' %}
+{% block body %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
+
+
+		<div class="main ui container" style="background: white; width: 60%; height: 800px; padding-top: 5px;">
+			<div class="header-bar">个人设置</div>
+			<div class="ui divider"></div>
+
+			<div style="margin-left: 100px; margin-top: 80px;">
+				<div class="field">
+					<label>账号邮箱</label>
+					<div class="ui disabled corner labeled input" >
+					  <input type="text" placeholder="已绑定邮箱">
+					  <div class="ui corner label">
+					    <i class="asterisk icon"></i>
+					  </div>
+					</div>
+				</div>
+				<div style="height: 50px;"></div>
+
+                <div style="margin-bottom: 3em;">
+                <label style="width: 100%;margin-right:1em;">原密码</label>
+					<div class="ui corner labeled input" >
+					  <input type="text" placeholder="请输入原密码">
+                    </div>
+                </div>
+
+				<div class="field">
+					<label style="width: 100%;margin-right:2em;">密码</label>
+					<div class="ui corner labeled input" >
+					  <input type="text" placeholder="请输入新密码">
+					  <div class="ui action input" style="margin-left:1em;">
+						  <input type="text" value="" placeholder="请确认新密码">
+						  <button class="ui teal button">保存密码</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+{% endblock %}
