@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'users',
     'resume',
     'company',
+    'user_operation',
+    'xadmin',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [

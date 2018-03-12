@@ -49,14 +49,6 @@ class SelfIntroView(View):
         self_intro = request.POST.get('self-info')
 
 
-# 暂定
-class ShowCaseView(View):
-    def get(self, request):
-        return render(request, 'resume/showcase.html')
-
-    def post(self, request):
-        pass
-
 
 class SkillView(View):
     def get(self, request):

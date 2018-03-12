@@ -7,18 +7,16 @@ $(document).ready(function() {
 });
 
 
-
-
-
     $("#signin-button").click(function () {
+        console.log('<<<<')
         var username = $("#username").val();
         var password = $("#password").val();
         if (username.length < 2 || password.length < 6) {
-            console.log("账号或密码格式不对");
-            $(".error-red-text").text("账号或密码格式不对").show();
+            console.log("账号或密码格式不对1");
+            $(".error-red-text").text("账号或密码格式不对1").show();
         } else {
             $.ajax({
-                url: "/signin/",
+                url: "/login/",
                 type: "POST",
 
                 data: {
@@ -32,8 +30,11 @@ $(document).ready(function() {
                     console.log(returndata.msg);
 
                     if (returndata.msg == 1) {
-                        console.log("账号或密码错误");
-                        $(".error-red-text").text("账号或密码错误").show();
+                        console.log("账号或密码错误2");
+                        $(".error-red-text").text("账号或密码错误2").show();
+                    }
+                    else{
+                        window.location.replace("http://127.0.0.1:8000/job/")
                     }
                 }
             })

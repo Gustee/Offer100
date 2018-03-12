@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>100offer</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/basic/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/resume.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'font/icon/iconfont.css' %}">
+    <link rel="stylesheet" type="text/css" href="at.alicdn.com/t/font_573684_ejhst516wgb65hfr.css">
+{#<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>#}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/basic/tagSelect.js' %}"></script>
+<script>
+    $(function(){
+        new SelectTag({
+            child : ".sx_child", //所有筛选范围内的子类
+            over : 'on', //选中状态样式名称
+            all : ".all"
+        });
+    })
+</script>
+</head>
+<body>
+	<div class="page">
+		<div class="header">
+			<a href="index.html" class="icon1"><img src="{% static 'img/icon1.png'%}"></a>
+			<ul class="ul top">
+				<li class="li top"><a href="/home/" class="ref top">首页</a></li>
+				<li class="li top"><a href="/job/" class="ref top">选职位</a></li>
+				<li class="li top"><a href="" class="ref top">我的面试</a></li>
+				<li class="li top"><a href="/resume/basic/" class="ref top">简历</a></li>
+			</ul>
+			<a href="#" class="icon2"><img src="{% static 'img/icon2.png'%}"></a>
+			<a href="#" class="icon3"><img src="{% static 'img/icon3.png'%}"></a>
+		</div>
+
+    {% block body %}{% endblock %}
+    <div class="footer">
+        <div class="main-container">
+            <div class="links">
+                <ul>
+                    <li><a href="">关于我们</a></li>
+                    <li><a href="">使用攻略</a></li>
+                    <li><a href="">加入我们</a></li>
+                    <li><a href="">法律声明</a></li>
+                    <li class="hidden-xs">|</li>
+                    <li>
+                        <span class="hidden-xs">关注我们：</span>
+                        <span class="weixinqr-trigger" id="weixinqr">
+                            <span class="weixin-grey">
+                                <img alt="Wechat grey" src="https://snow-assets.b0.upaiyun.com/assets/index/wechat-grey-6895b2215cccd7ea4a913e941be324aa.png">
+                            </span>
+                            <span class="weixin">
+                                <img alt="Wechat" src="https://snow-assets.b0.upaiyun.com/assets/index/wechat-97ad7d3ba2d0c223b5739fe7c2763725.png">
+                            </span>
+                            <div class="qrcode" style="display: none">
+                                <img  alt="Qrcode" src="https://snow-assets.b0.upaiyun.com/assets/mail_template/qrcode-4e762afe8dc59a5f29915c46c10816fb.jpg">
+                            </div>
+                        </span>
+                        <span id="weibo">
+                            <span class="weibo-grey">
+                                <a href="#" target="_blank">
+                                    <img alt="Weibo grey" src="https://snow-assets.b0.upaiyun.com/assets/index/weibo-grey-1bcee302bcd07bddc786d85aa988d3b1.png">
+                                </a>
+                            </span>
+                            <span class="weibo">
+                                <a href="#" target="_blank">
+                                    <img alt="Weibo" src="https://snow-assets.b0.upaiyun.com/assets/index/weibo-cbcf72f5e367c3075e7c92a04ecb60d0.png">
+                                </a>
+                            </span>
+                        </span>
+                        <span id="blog">
+                            <span class="blog-grey">
+                                <a href="#" target="_blank">
+                                    <img alt="Blog grey" src="https://snow-assets.b0.upaiyun.com/assets/index/blog-grey-c738b959788e33bcfb141a6616049af2.png">
+                                </a>
+                            </span>
+                            <span class="blog">
+                                <a href="#" target="_blank">
+                                    <img alt="Blog" src="https://snow-assets.b0.upaiyun.com/assets/index/blog-9c0f065a8918ae9b9fc1726ea2234959.png">
+                                </a>
+                            </span>
+                        </span>
+                        <span id="linkedin">
+                            <span class="linkedin-grey">
+                                <a href="#" target="_blank">
+                                    <img alt="Linkedin grey" src="https://snow-assets.b0.upaiyun.com/assets/index/linkedin-grey-ee2c4f15688fab80f500e74a9e400a8b.png">
+                                </a>
+                            </span>
+                            <span class="linkedin">
+                                <a href="#" target="_blank">
+                                <img alt="Linkedin" src="https://snow-assets.b0.upaiyun.com/assets/index/linkedin-35f5d7ae62c82881d9026e998f00a0c9.png">
+                                </a>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">沪ICP备14017096号-3 © 2016 上海奇点人才服务有限公司</div>
+        </div>
+    </div>
+
+    </div>
+
+<script src="{% static 'semantic/semantic.min.js'%}"></script>
+    <script src="{% static 'js/resume.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+</html>

@@ -18,6 +18,13 @@ class Candidate(models.Model):
     image = models.ImageField(upload_to="image/%Y/%m", default="image/default.png", max_length=100)
     resume = models.OneToOneField(Resume, on_delete=models.PROTECT, null=True,blank=True)
 
+    class Meta:
+        verbose_name = "候选人信息"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
 
 class HR(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
@@ -25,6 +32,13 @@ class HR(models.Model):
     phone = models.CharField(max_length=15, verbose_name='电话')
     company = models.ForeignKey(Company, on_delete=models.PROTECT, null=True,blank=True),
     position = models.CharField(max_length=20, default='',verbose_name='职位')
+
+    class Meta:
+        verbose_name = "HR信息"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
 
 
 class EmailVerifyRecord(models.Model):
@@ -36,3 +50,6 @@ class EmailVerifyRecord(models.Model):
     class Meta:
         verbose_name = "邮箱验证码"
         verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.email

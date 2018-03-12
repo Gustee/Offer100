@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import xadmin
 from django.contrib import admin
 from django.urls import path, include
 from users.views import *
@@ -21,25 +22,24 @@ from job.views import *
 from company.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', xadmin.site.urls),
     path('signup/', RegisterView.as_view(), name='signup'),
+    path('talent_confirm_mail/', ConfirmMailView.as_view()),
     path('active/<str:code>', ActiveUserView.as_view(), name='active'),
     path('home/', home_view, name='home'),
-    path('logout/', LogoutView.as_view(), name='logout'),
-    path('login/', LoginView.as_view(), name='signin'),
+    path('logout/', LogoutView.as_view()),
+    path('login/', LoginView.as_view()),
     path('user/', include('users.urls')),
-    path('account/', AccountView.as_view()),
     path('resume/basic/', BasicView.as_view()),
     path('resume/career/', CareerView.as_view()),
     path('resume/experience/', ExperienceView.as_view()),
     path('resume/self_intro/', SelfIntroView.as_view()),
-    path('resume/showcase/', ShowCaseView.as_view()),
     path('resume/skill/', SkillView.as_view()),
     path('resume/social_media/', SocialMediaView.as_view()),
     path('job/', JobsView.as_view()),
     path('job/<str:id>', DetailView.as_view()),
-    path('company/info', InfoView.as_view()),
-    path('company/applicant', ApplicantView.as_view()),
-    path('company/new', NewView.as_view()),
-    path('company/position', PositionView.as_view())
+    path('company/info/', InfoView.as_view()),
+    path('company/applicant/', ApplicantView.as_view()),
+    path('company/new/', NewView.as_view()),
+    path('company/position/', PositionView.as_view())
 ]

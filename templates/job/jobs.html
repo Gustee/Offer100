@@ -1,30 +1,30 @@
 
-{% extends 'basic/tpl_0.html' %}
+{% extends 'basic/tpl_logged_classifier.html' %}
 {% block body %}
     {% include 'basic/search.html' %}
     {% include 'job/classifier.html' %}
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/job.css' %}">
-    <div style="width:1200px;margin:0 auto 15px auto;">
-        <div class="ui menu">
-          <div class="header item">Brand</div>
-          <a class="active item">Link</a>
-          <a class="item">Link</a>
-          <div class="ui dropdown item">
-            Dropdown
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item">Action</div>
-              <div class="item">Another Action</div>
-              <div class="item">Something else here</div>
-              <div class="divider"></div>
-              <div class="item">Separated Link</div>
-              <div class="divider"></div>
-              <div class="item">One more separated link</div>
-            </div>
-          </div>
-        </div>
-    </div>
+{#    <div style="width:1200px;margin:0 auto 15px auto;">#}
+{#        <div class="ui menu">#}
+{#          <div class="header item">Brand</div>#}
+{#          <a class="active item">Link</a>#}
+{#          <a class="item">Link</a>#}
+{#          <div class="ui dropdown item">#}
+{#            Dropdown#}
+{#            <i class="dropdown icon"></i>#}
+{#            <div class="menu">#}
+{#              <div class="item">Action</div>#}
+{#              <div class="item">Another Action</div>#}
+{#              <div class="item">Something else here</div>#}
+{#              <div class="divider"></div>#}
+{#              <div class="item">Separated Link</div>#}
+{#              <div class="divider"></div>#}
+{#              <div class="item">One more separated link</div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
     <div class="job-card">
@@ -53,6 +53,76 @@
             <a class="ui large label">架构<i class="delete icon"></i> </a>
             <a class="ui large label">Spring<i class="delete icon"></i> </a>
             <a class="ui large label">JVM<i class="delete icon"></i> </a>
+        </div>
+        <div class="job-card-foot-right">
+            <div class="ui tag labels" style="margin-top: 10px;">
+              <a class="ui large label">股票期权</a>
+              <a class="ui large label">绩效奖金</a>
+              <a class="ui large label">弹性工作</a>
+            </div>
+        </div>
+    </div>
+    <div class="job-card">
+        <div class="job-card-head-left">
+            <div class="jchl-head">
+                <a href="/job/1">C++实习生[西兴]</a>
+                <p>1天前发布</p>
+            </div>
+            <div class="jchl-foot">
+                <p class="jchl-foot-1">5k-10k</p>
+                <p class="jchl-foot-2">经验1-3年/硕士</p>
+            </div>
+        </div>
+        <div class="job-card-head-right">
+            <div class="jchr-left">
+                <p class="jchr-left-1">百度</p>
+                <p class="jchr-left-2">移动互联网/上市公司</p>
+            </div>
+            <div class="jchr-right">
+                {% load staticfiles %}
+                <img class="jchr-right-img" src="{% static 'img/company/logo/1.jpg' %}">
+            </div>
+        </div>
+        <div class="job-card-foot-left">
+            <a class="ui large label">C++<i class="delete icon"></i> </a>
+            <a class="ui large label">架构<i class="delete icon"></i> </a>
+            <a class="ui large label">QT<i class="delete icon"></i> </a>
+            <a class="ui large label">优化<i class="delete icon"></i> </a>
+        </div>
+        <div class="job-card-foot-right">
+            <div class="ui tag labels" style="margin-top: 10px;">
+              <a class="ui large label">股票期权</a>
+              <a class="ui large label">绩效奖金</a>
+              <a class="ui large label">弹性工作</a>
+            </div>
+        </div>
+    </div>
+    <div class="job-card">
+        <div class="job-card-head-left">
+            <div class="jchl-head">
+                <a href="/job/1">算法实习生[西兴]</a>
+                <p>1天前发布</p>
+            </div>
+            <div class="jchl-foot">
+                <p class="jchl-foot-1">5k-10k</p>
+                <p class="jchl-foot-2">经验1-3年/硕士</p>
+            </div>
+        </div>
+        <div class="job-card-head-right">
+            <div class="jchr-left">
+                <p class="jchr-left-1">腾讯科技</p>
+                <p class="jchr-left-2">移动互联网/上市公司</p>
+            </div>
+            <div class="jchr-right">
+                {% load staticfiles %}
+                <img class="jchr-right-img" src="{% static 'img/company/logo/1.jpg' %}">
+            </div>
+        </div>
+        <div class="job-card-foot-left">
+            <a class="ui large label">数据挖掘<i class="delete icon"></i> </a>
+            <a class="ui large label">机器学习<i class="delete icon"></i> </a>
+            <a class="ui large label">深度学习<i class="delete icon"></i> </a>
+            <a class="ui large label">大数据<i class="delete icon"></i> </a>
         </div>
         <div class="job-card-foot-right">
             <div class="ui tag labels" style="margin-top: 10px;">

@@ -1,0 +1,118 @@
+/* 2016.7.13 */
+/* 公用 */
+body{margin: 0px;  font-family: "Hiragino Sans GB", "microsoft yahei", helvetica, arial, sans-serif !important;color: #565a5c;}
+/* head */
+.head {width: 100%;height: 635px  }
+.head-pic {min-width: 1200px;  height: 635px;background-size: 2000px auto;background: url(https://snow-assets.b0.upaiyun.com/assets/index/company-banner-9fc20deca7bc551c88ccda5c2a1066a0.jpg) top center no-repeat}
+.head-first {height: 100px  }
+.head-first img {  width: 170px;  height: 34px;  margin-top: 32px;  margin-left: 48px  }
+.daohang { float: right; margin-top: 35px; margin-right: 48px; display: inline-block  }
+.daohang ul {margin-bottom: 10px; margin-top: 0; padding-left: 40px  }
+.daohang ul li {font-size: 17px;display: inline;  opacity: 1;  margin-left: 24px;  margin-right: 24px;  padding-bottom: 5px;  color: #565a5c;  }
+.daohang ul li a {line-height: 1.428;font-family: "Hiragino Sans GB", "microsoft yahei", helvetica, arial, sans-serif !important;color: #333333;display: inline-block;  }
+.daohang ul li a.getA {width: 80px;  background-color: #000000;  height: 30px;  line-height: 30px;  text-align: center;  border-radius: 15px;  color: #ffffff;  }
+.daohang ul li a.getB {width: 80px;  background-color: #12c3f9;  height: 30px;  line-height: 30px;text-align: center;border-radius: 15px;color: #ffffff;  }
+.banner-text{margin:auto;display: block;width: 800px;padding-top: 180px;text-align: center}
+.banner-text .content {padding-bottom: 25px;  }
+.banner-text .content .title{font-family:inherit;font-size: 38px;line-height: 23px;margin-bottom: 0px;margin-top: 20px;font-weight:500}
+.banner-text .content .subtitle{margin-top: 15px;font-size: 21px;line-height: 35px;margin: 15px 0 10px 0;color: #333333}
+.banner-btn{display:block;border-radius:2px;text-align: center;cursor: pointer;background-color: #12c3f9;width: 168px;height: 40px;line-height: 42px;margin: auto;font-size: 18px;}
+.banner-btn a{color: #fff}
+.banner-text .content div.banner-btn:hover{transition: all 0.2s ease-in;background-color: #428bca}
+/* news */
+.news{min-width: 1200px;height: 130px;padding: 40px 0;}
+.news .news-content{margin: 0 auto;max-width: 1100px;}
+.news .news-content .item{width: 194px}
+.news .news-content a{display: inline-block;height: 110px;padding-left: 40px;padding-right:40px;background-color: #fff;float: left;text-align: center;border-right: 1px solid #ccc;}
+.news .news-content a:last-child{border-right: none}
+.news .news-content a img{width: 70px;height: 70px;margin: 0 auto}
+.news .news-content a .pic1{display: block}
+.news .news-content a .pic2{display: none}
+.news .news-content a .news-text{color: #9c9c9c}
+.news .news-content a .qrcode{display: none;position: absolute;top:500px;left: 1000px}
+.news .news-content a .qrcode img{width: 165px;height: 165px;}
+
+/* advantages */
+.advantages{width:100%;background-color:#f8f8f8;min-width: 1200px;padding-top: 80px;padding-bottom: 80px}
+.inner{height: 405px;margin: 0 auto;max-width: 1100px}
+.point{width:calc(33% - 100px);padding: 30px;margin:  0 20px;display: inline-block;background-color: #fff;float: left}
+.point .icon{display: inline-block;vertical-align: top}
+.point .icon img{width: 100%;height:100%;}
+.point .describe{text-align: left;}
+.point .describe .d-title{font-size: 18px;text-align: center;border-bottom: 1px dashed #d2d2d2;color: #333;padding-bottom: 20px;margin-bottom: 20px;height: 50px}
+.point .describe .d-content{height: 88px;text-align: justify;font-size: 16px;color: #999}
+
+/* process */
+.process{background-color: #fff;min-width: 1200px;padding-top: 80px;padding-bottom: 80px;text-align: center}
+.process-in{max-width: 1100px;margin: 0 auto}
+.singleblock{display: inline-block;width:261px;;margin: 0 3px;vertical-align: top}
+.singleblock .step-image{margin:auto;;height: 120px;text-align: center}
+.singleblock .step-image img{width: 120px;height: 120px;}
+.singleblock .step-title{padding: 20px 0;text-align: center;font-size: 18px;color: #000}
+.singleblock .step-detail{padding: 0 20px;text-align: justify;color: #999;font-size: 16px}
+.process a{display: block;width: 420px;height: 50px;line-height: 50px;margin: 60px auto 20px auto;color: #999;border: 1px solid #000;font-size: 16px}
+.process a:hover{color:#12c3f9;text-decoration: underline}
+/* Company */
+.company{min-width: 1200px;height: 590px;padding-top: 40px}
+.company .company-title{font-size: 30px;text-align: center;margin-top: 20px;margin-bottom: 10px}
+.company .company-list{width: 80%;margin: 0 10%;margin-top: 90px;}
+/* 轮播 */
+.lunbo{min-width: 1200px;height: 176px;background-color: #f8f8f8;position: relative;color: #FFFFFF;font-size: 16px;padding-bottom: 60px;padding-top: 60px;width: 100%;overflow: hidden}
+.lunbo a.left-btn{width:25px;height: 50px;display: inline-block;position: absolute;left:33px;top:45%;background: url("img/arrow%20-%20left.png") 0 0 no-repeat;background-size: 25px 50px;z-index: 100}
+.lunbo a.right-btn{width:25px;height: 50px;display: inline-block;position: absolute;right:33px;top:45%;background: url("img/arrow%20-%20right.png") 0 0 no-repeat;background-size: 25px 50px;z-index: 100}
+.lunbo ul{position: relative;width: 300%;height: 175px;margin: 0;padding: 0;left: 0%}
+.lunbo ul li{float: left;width: 1349px;padding: 0;margin: 0;list-style: none}
+.lunbo ul li .c-logo{margin: 0 auto;display: block;text-align: center}
+.c-logo .logo{position: relative;cursor: pointer;margin: 0px 15px;opacity: 0.8;display: inline-block;width: 170px;height: 170px;}
+.c-logo .logo p.hover-text{display: none;position: absolute;width: 170px;height: 120px;font-size: 16px;text-align: center;padding: 63.5px 5px 0 5px;background-color: #12c3f9;color: #fff}
+.c-logo .img0{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 0 no-repeat;background-size: 170px}
+.c-logo .img1{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -170px no-repeat;background-size: 170px}
+.c-logo .img2{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -340px no-repeat;background-size: 170px}
+.c-logo .img3{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -510px no-repeat;background-size: 170px}
+.c-logo .img4{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -680px no-repeat;background-size: 170px}
+.c-logo .img5{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -850px no-repeat;background-size: 170px}
+.c-logo .img6{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -1020px no-repeat;background-size: 170px}
+.c-logo .img7{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -1190px no-repeat;background-size: 170px}
+.c-logo .img8{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -1360px no-repeat;background-size: 170px}
+.c-logo .img9{background: url("https://snow-assets.b0.upaiyun.com/assets/index/company-logos-e902fa86bbdf436698e4662e80be4aaf.png") 0 -1530px no-repeat;background-size: 170px}
+
+
+/* problem */
+.problem{width: 100%;min-width: 1200px;margin: 0 auto}
+.problem .problem-container{padding: 60px 120px;}
+.problem .problem-container div{width:calc(50% - 100px);margin:0 25px;display: inline-block;height: 150px;vertical-align: top;margin-bottom: 50px}
+.problem .problem-container div h1{margin-bottom: 20px;font-size: 18px;color: #000}
+.problem .problem-container div p{font-size: 16px;color: #999;line-height: 22px}
+.problem .problem-container a{display: block;font-size: 18px;color: #ccc;text-align: center;text-decoration: underline;margin-bottom: 20px}
+
+
+
+
+
+    /* register */
+.register-con{width: 100%;background: #2E3137;height: 94px;min-width: 1200px}
+.register-con .register-text{text-align: center;font-size: 24px;;color: #fff;font-weight: 400;display: inline-block;padding-left: 150px;padding-top: 30px}
+.register-con .banner-btn{display: inline-block;margin-left: 400px;}
+
+/* footer */
+.footer{background-color: #000;min-width: 1200px;line-height: 80px}
+.footer .main-container{max-width: 1440px;margin: 0 auto}
+.footer .main-container .links{display: inline-block;padding-left: 60px}
+.footer .main-container .links ul li{list-style: none;display: inline-block;font-size: 16px;margin-right: 15px}
+.footer .main-container .links ul li a{color: #999;display: inline-block}
+.footer .main-container .links ul li a:hover{text-decoration: underline}
+.footer .main-container .links ul li span{display: inline-block}
+.footer .main-container .links ul li #weixinqr{position: relative}
+.footer .main-container .links ul li #weixinqr img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #weixinqr .weixin{display: none}
+.footer .main-container .links ul li #weixinqr .qrcode{display: none;position: absolute;top:-220%;left: -150%}
+.footer .main-container .links ul li #weixinqr .qrcode img{;width: 165px;height: 165px;}
+.footer .main-container .links ul li #weibo img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #weibo .weibo{display: none}
+.footer .main-container .links ul li #blog img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #blog .blog{display: none}
+.footer .main-container .links ul li #linkedin img{width: 40px;height: 40px;vertical-align: middle}
+.footer .main-container .links ul li #linkedin .linkedin{display: none}
+#weibo,#blog,#linkedin{margin-left: 30px}
+
+.footer .main-container .copyright{display: inline-block;float: right;color: #999;padding-right: 40px;font-size: 16px}

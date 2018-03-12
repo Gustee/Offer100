@@ -9,24 +9,21 @@ from utils.email_send import send_register_email
 import json
 # Create your views here.
 
-
+# 主页
 def home_view(request):
-    return render(request, 'basic/index.html')
+    # return render(request, 'basic/index.html')
+    return render(request, 'basic/surface_index.html')
 
-
+# 注册
 class RegisterView(View):
     """
     用户注册
     """
     def get(self, request):
         pass
-        # candidate_register_form = CandidateRegisterForm()
-        # hr_register_form = HrRegisterForm()
-        # return render(request, 'register.html',
-        #               {'candidate_register_form': candidate_register_form,
-        #                'hr_register_form': hr_register_form})
 
     def post(self, request):
+        # 候选人
         if request.POST.get('type') == 'applicant':
             name = request.POST.get('username')
             password = request.POST.get('password')
@@ -45,31 +42,8 @@ class RegisterView(View):
                 #send_register_email(email, 'register')
                 ret = {'msg': 0, 'email': email}
                 return HttpResponse(json.dumps(ret))
-            # candidate_register_form = CandidateRegisterForm(request.POST)
-            # hr_register_form = HrRegisterForm()
-            # if candidate_register_form.is_valid():
-            #     username = request.POST.get('email', '')
-            #     if User.objects.filter(username=username):
-            #         return render(request, 'register.html',
-            #                       {'candidate_register_form': candidate_register_form,
-            #                        'hr_register_form': hr_register_form,
-            #                        'msg': '该邮箱已注册'})
-            #     password = request.POST.get('password', '')
-            #     new_user = User.objects.create(username=username)
-            #     new_user.password = make_password(password)
-            #     new_user.is_active = True
-            #     new_user.save()
-            #     candidate = Candidate.objects.create(user=new_user)
-            #     candidate.save()
-            #     auth.login(request, new_user)
-            #     send_register_email(username, "register")
-            #     return render(request, 'talent_confirm_mail.html', {'email':username})
-            #
-            #
-            # else:
-            #     return render(request, 'register.html',
-            #               {'candidate_register_form': candidate_register_form,
-            #                'hr_register_form': hr_register_form})
+
+        # HR
         else:
             name = request.POST.get('username')
             password = request.POST.get('password')
@@ -116,43 +90,52 @@ class RegisterView(View):
             #               {'candidate_register_form': candidate_register_form,
             #                'hr_register_form': hr_register_form})
 
-
+# 登陆
 class LoginView(View):
     def get(self, request):
         #login_form = LoginForm(request.POST)
-        if request.user.is_authenticated:
-            return render(request, '')
+        # if request.user.is_authenticated:
+        #     return render(request, '')
         return render(request, 'user/login.html')
 
     def post(self, request):
-        login_form = LoginForm(request.POST)
-        if login_form.is_valid():
-            username = request.POST.get("username", "")
-            password = request.POST.get("password", "")
-            user_type = request.POST.get('user_type', '')
-            user = auth.authenticate(username=username, password=password)
-            if user is not None:
-                if user.is_active:
-                    auth.login(request, user)
-                    if user_type == 'candidate':
-                        #候选人登陆成功
-                        return HttpResponseRedirect("/home")
-                    else:
-                        #hr登陆成功
-                        return HttpResponseRedirect('/home')
-                else:
-                    #用户没有激活提示用户去邮箱点击激活链接
-                    return render(request, "login.html", {"login_form": LoginForm(),
-                                                      "msg": "您的账号还没有使用邮箱激活"})
-            else:
-                #用户名或密码错误
-                return render(request, "login.html", {"login_form": LoginForm(),
-                                                  "msg": "用户名或密码不正确"})
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+            ret = {'msg': 0}
+            return HttpResponse(json.dumps(ret))
         else:
-            #输入不合法
-            return render(request, 'login.html', {'login_form': login_form, 'msg': '您的输入不合法'})
+            ret = {'msg': 1}
+            return HttpResponse(json.dumps(ret))
+        # if login_form.is_valid():
+        #     username = request.POST.get("username", "")
+        #     password = request.POST.get("password", "")
+        #     user_type = request.POST.get('user_type', '')
+        #     user = auth.authenticate(username=username, password=password)
+        #     if user is not None:
+        #         if user.is_active:
+        #             auth.login(request, user)
+        #             if user_type == 'candidate':
+        #                 #候选人登陆成功
+        #                 return HttpResponseRedirect("/home")
+        #             else:
+        #                 #hr登陆成功
+        #                 return HttpResponseRedirect('/home')
+        #         else:
+        #             #用户没有激活提示用户去邮箱点击激活链接
+        #             return render(request, "login.html", {"login_form": LoginForm(),
+        #                                               "msg": "您的账号还没有使用邮箱激活"})
+        #     else:
+        #         #用户名或密码错误
+        #         return render(request, "login.html", {"login_form": LoginForm(),
+        #                                           "msg": "用户名或密码不正确"})
+        # else:
+        #     #输入不合法
+        #     return render(request, 'login.html', {'login_form': login_form, 'msg': '您的输入不合法'})
 
-
+# 邮箱激活
 class ActiveUserView(View):
     def get(self, request, code):
         all_records = EmailVerifyRecord.objects.filter(code=code)
@@ -164,46 +147,52 @@ class ActiveUserView(View):
                 new_user = Candidate.objects.get(user_id=user.id)
                 new_user.save()
                 auth.login(request, user)
-                return HttpResponseRedirect('/home')
+                return HttpResponseRedirect('/user/personal_info')
         else:
             return HttpResponseRedirect('/home')
 
-
+# 退出登陆
 class LogoutView(View):
     def get(self, request):
         auth.logout(request)
         return HttpResponseRedirect('/')
 
 
-class PersonalInfoView(View):
+class ConfirmMailView(View):
     def get(self, request):
-        if request.user.is_authenticated():
-            personal_info_form = PersonalInfoForm(request.POST)
-            return render(request, 'persional_info.html', {'form': personal_info_form})
-        else:
-            return HttpResponseRedirect('/signin')
+        email = request.GET.get('e')
+        return render(request, 'user/mailconfirmation.html', {'email': email})
 
-    def post(self, request):
-        if request.user.is_authenticated():
-            personal_info_form = PersonalInfoForm(request.POST)
-            if personal_info_form.is_valid():
-                name = request.POST.get('name', '')
-                gender = request.POST.get('gender', 'male')
-                education = request.POST.get('education', 'bachelor')
-                city = request.POST.get('city', '')
-                mobile = request.POST.get('mobile', '')
-                image = request.FILES.get('image', 'default.png')
-                candidate = Candidate.objects.get(user=request.user)
-                candidate.name = name
-                candidate.gender = gender
-                candidate.education = education
-                candidate.city = city
-                candidate.mobile = mobile
-                candidate.image = image
-                candidate.save()
-                return HttpResponseRedirect('/home')
-            return render(request, 'persional_info.html', {'form': personal_info_form})
-        return HttpResponseRedirect('/signin')
+
+# class PersonalInfoView(View):
+#     def get(self, request):
+#         if request.user.is_authenticated():
+#             personal_info_form = PersonalInfoForm(request.POST)
+#             return render(request, 'persional_info.html', {'form': personal_info_form})
+#         else:
+#             return HttpResponseRedirect('/signin')
+#
+#     def post(self, request):
+#         if request.user.is_authenticated():
+#             personal_info_form = PersonalInfoForm(request.POST)
+#             if personal_info_form.is_valid():
+#                 name = request.POST.get('name', '')
+#                 gender = request.POST.get('gender', 'male')
+#                 education = request.POST.get('education', 'bachelor')
+#                 city = request.POST.get('city', '')
+#                 mobile = request.POST.get('mobile', '')
+#                 image = request.FILES.get('image', 'default.png')
+#                 candidate = Candidate.objects.get(user=request.user)
+#                 candidate.name = name
+#                 candidate.gender = gender
+#                 candidate.education = education
+#                 candidate.city = city
+#                 candidate.mobile = mobile
+#                 candidate.image = image
+#                 candidate.save()
+#                 return HttpResponseRedirect('/home')
+#             return render(request, 'persional_info.html', {'form': personal_info_form})
+#         return HttpResponseRedirect('/signin')
 
 
 # class AccountView(View):
@@ -230,6 +219,9 @@ class PersonalInfoView(View):
     def get(self, request):
         return render(request, 'user/personal_info.html')
 
+    def post(self, request):
+        return HttpResponseRedirect('/user/career_info/')
+
 
 class AccountView(View):
     def get(self, request):
@@ -239,6 +231,8 @@ class AccountView(View):
 class CareerInfoView(View):
     def get(self, request):
         return render(request, 'user/career_info.html')
+    def post(self, request):
+        return HttpResponseRedirect('/user/experience/')
 
 
 class Experience(View):

@@ -11,15 +11,16 @@
     <link rel="stylesheet" type="text/css" href="{% static 'semantic/semantic.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'font/icon/iconfont.css' %}">
     <link rel="stylesheet" type="text/css" href="at.alicdn.com/t/font_573684_ejhst516wgb65hfr.css">
-<script src="http://semantic-ui.com/javascript/library/jquery.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="http://semantic-ui.com/javascript/menu.js"></script>
 <script src="http://semantic-ui.com/javascript/docs.js"></script>
 
 
 </head>
 <body>
-
+{# 未登陆 #}
 <div class="head-first" style="background-color: #EEF3F8;">
+
     <img src="{% static 'img/logo.png' %}">
     <div class="daohang">
         <ul>
@@ -27,12 +28,26 @@
             <li><a href="#">使用攻略</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">推荐</a></li>
-            <li><a href="#" class="getA">登录</a></li>
-            <li><a href="#" class="getB">注册</a></li>
+            <li><a href="/login/" class="getA">登录</a></li>
+            <li><a href="/login/" class="getB">注册</a></li>
         </ul>
     </div>
 
 </div>
+
+{# 已经登陆 #}
+
+{#    <div class="header">#}
+{#			<a href="index.html" class="icon1"><img src="{% static 'img/icon1.png'%}"></a>#}
+{#			<ul class="ul top">#}
+{#				<li class="li top"><a href="/home/" class="ref top">首页</a></li>#}
+{#				<li class="li top"><a href="/job/" class="ref top">选职位</a></li>#}
+{#				<li class="li top"><a href="" class="ref top">我的面试</a></li>#}
+{#				<li class="li top"><a href="/resume/basic/" class="ref top">简历</a></li>#}
+{#			</ul>#}
+{#			<a href="#" class="icon2"><img src="{% static 'img/icon2.png'%}"></a>#}
+{#			<a href="#" class="icon3"><img src="{% static 'img/icon3.png'%}"></a>#}
+{#    </div>#}
 
 {% block body %}{% endblock %}
 <div class="footer">
